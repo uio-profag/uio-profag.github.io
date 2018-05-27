@@ -1,0 +1,5 @@
+<div class="card mx-auto {{ include.width | default: w-100 }}">
+    <img class="card-img-top" src="{{ include.file }}"
+       alt="{{ include.alt | default: "Some figure"}}"/>
+    <div class="card-body"><p class="card-text text-center"> <b>Figur:</b> <i>{{ include.caption | default: ""}}</i></p></div>
+</div>
