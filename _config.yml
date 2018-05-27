@@ -15,12 +15,6 @@ paginate:         5
 # paginate_path:    '/page:num'
                     # Or '/blog/page:num' if you want to move your index pages
 
-exclude: []
-sass:
-  load_paths:
-        - _sass
-        - node_modules
-
 plugins:
   - jekyll-feed
   - jekyll-gist
