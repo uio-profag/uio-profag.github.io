@@ -1,9 +1,8 @@
 <div id="sidebar">
     
   <header>
-      <svg style="width: 100%">
-          {% include svg/uio_logo_small.svg %}
-        </svg>
+      <img src="/assets/images/uio_logo_small.svg">
+      <p><br></p>
     <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
       <a href="{{ site.baseurl }}/">
         {% unless page.url == "/" %}
