@@ -3,4 +3,13 @@
 # only main files contain this front matter, not partials.
 ---
 
+
+
+@import "bootstrap/scss/bootstrap";
 @import "hydeout";
+
+.category-link {
+    @extend .btn;   
+    @extend .btn-outline-primary;
+    @extend .btn-block;
+}
