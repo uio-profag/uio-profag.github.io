@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Plotting
-sidebar_link: false
+sidebar_link: true
 ---
 
 # Dag 1 Del 3 Plotting
