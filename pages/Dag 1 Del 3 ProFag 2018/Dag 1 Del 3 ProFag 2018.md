@@ -1,7 +1,10 @@
+---
+layout: page
+title: Plotting
+sidebar_link: true
+---
 
-# Dag 1 Del 3
-* Plotting
-* Lese fra fil
+# Dag 1 Del 3 Plotting
 
 ## Plotting
 Du plottet kanskje da du installerte Python og ble bedt om å kjøre dette scriptet: 
