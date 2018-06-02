@@ -1,5 +1,9 @@
 ---
-layout: index
-title: Home
+layout: page
+title: 
 ---
 
+{% capture my_include %}
+{% include_relative /pages/index.md %}
+{% endcapture %}
+{{ my_include | markdownify }}
