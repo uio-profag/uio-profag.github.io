@@ -1,3 +1,9 @@
+# UiO Profag nettsider
+
+To make pages show up in the sidebar, add `sidebar_link: true` to the front
+matter.
+
+
 # Hydeout
 
 Hydeout updates the original [Hyde](https://github.com/poole/hyde)
