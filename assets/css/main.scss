@@ -6,6 +6,25 @@
 @import "bootstrap/scss/bootstrap";
 @import "hydeout";
 
+#sidebar a.active {
+  font-weight: normal;
+}
+
+.embed-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  }
+
+.ratio-uio-logo {
+  padding-bottom: 16.38%; // 96/586*100
+}
+
+.btn{
+  white-space:normal !important;
+  word-wrap: break-word; 
+}
+
 .category-link {
     @extend .btn;   
     @extend .btn-outline-primary;
