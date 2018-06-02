@@ -6,6 +6,10 @@
 @import "bootstrap/scss/bootstrap";
 @import "hydeout";
 
+#sidebar a:hover {
+  text-decoration: none;
+}
+
 #sidebar a.active {
   font-weight: normal;
 }
