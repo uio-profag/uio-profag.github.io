@@ -79,7 +79,7 @@ else:
 ```
 
 Vi kan komplisere dette mer. Det kan utledes en formel for tiden det tar å oppnå en viss temperatur i eggeplommen: 
-$$t = 0.15 \left(\frac{c}{\pi}\right)^2 \ln\left[ \frac{2(T_{vann}-T_0)}{T_{vann}-T_{plomme}}\right] $$
+$t = 0.15 \left(\frac{c}{\pi}\right)^2 \ln\left[ \frac{2(T_{vann}-T_0)}{T_{vann}-T_{plomme}}\right]$
 der $c$ er eggets omkrets i cm, $T_{vann}$ er vanntemperaturen (om vi er ekstra nøye kan vi legge inn vannets kokepunkt som funksjon av høyde over havet). Nå kan vi stille et nytt spørsmål, memlig "hvor varm vil du ha eggeplommen?". 
 
 
