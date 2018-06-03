@@ -240,7 +240,7 @@ show()
 ```
 
 
-![png](output_20_0.png)
+![png](output_18_0.png)
 
 
 Plottet over viser hvor lang tid det tar å koke et egg om man ønsker en spesifikk plommetemperatur. Standardtemperatur for bløtkokt og hardkokt egg er markrt med henholdsvis grønn og rød strek.  
