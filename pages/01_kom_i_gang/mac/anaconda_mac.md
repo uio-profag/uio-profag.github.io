@@ -68,11 +68,12 @@ Dersom alt har gått bra skal du nå få opp en figur som viser $$A = t^2$$. Der
 
 Dersom man skulle få behov for å installere moduler som mangler, gjør man det i "Environments" (Men det er lite trolig at det blir nødvendig). 
 
-{% include figure.html width="w-75" file="install_packages.png" caption="Pakke-installasjon. Bruk søkefeltet oppe til høyre for å søke opp pakker." %}
+{% include figure.html width="w-100" file="install_packages.png" caption="Pakke-installasjon. Bruk søkefeltet oppe til høyre for å søke opp pakker." %}
 
 #### Installasjon av pygame
-Pygame er litt spesielt, for den finnes ikke som pakke i anaconda. Derfor må vi installere den med noe som heter `pip`: 
+I læreboka i Programmering og modellering brukes et bibliotek som heter `pygame`. Pygame er litt spesielt, for det finnes ikke som pakke i Anaconda. Derfor må vi installere den med noe som heter `pip`: 
 `>> /Applications/anaconda3/bin/pip install pygame`
+Det er her viktig at du bruker den `pip` som ligger i Anaconda-installasjonen. 
 
 ### Innstillinger i Anaconda
 Det er mange innstillinger i Anaconda, og mange ting er smak og behag. For at alle skal ha samme oppsett når vi er på kurs, slik at vi unngår unødig feilsøking, har vi følgende forslag til innstillinger: 
