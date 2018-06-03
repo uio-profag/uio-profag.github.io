@@ -1,22 +1,20 @@
 ---
 layout: page
 title:  "Installasjon av Anaconda for Windows"
-date:   2018-05-22 10:25:43 +0200
-categories: anaconda python
 ---
 Denne nettsiden fungerer ikke så bra med Internet Explorer, anbefaler å bruke Chrome, Firefox eller Safari. 
 
 ## Last ned Anaconda 
-Last ned Anaconda fra [Anaconda][anaconda]{:target="_blank"} sitt nettsted. ![Download]({{ "/assets/img/download_button.png" | absolute_url }})-knapp finnes øverst i høyre hjørne. Etter å ha klikket på denne lander man på en side med flere nedlastingsvalg. 
+Last ned Anaconda fra [Anaconda][anaconda]{:target="_blank"} sitt nettsted. ![Download]({{ "download_button.png" }})-knapp finnes øverst i høyre hjørne. Etter å ha klikket på denne lander man på en side med flere nedlastingsvalg. 
 Vanligvis vil nettstedet se hvilket operativsystem du har. Dersom den ikke gjør det velger du manuelt mellom MacOS, Windows eller Linux. 
 
 Under ser du nettsidene du vil møte under nedlastingen. (Klikk på pilene for å navigere i bildeserien)
 {% include carousel.html 
 id="downloadCarousel"
 images="
-/assets/img/windows/anaconda_page.png,
-/assets/img/windows/anaconda_download.png,
-/assets/img/windows/anaconda_download_2.png
+anaconda_page.png,
+anaconda_download.png,
+anaconda_download_2.png
 " %}
 
 Velg Python 3.6-versjonen og klikk på den grønne download-knappen (dette gir deg 64-bit versjonen, som så å si alltid er riktig). Før nedlasting kan det hende du blir bedt om å registrere deg, da er det bare å klikke på 
@@ -28,15 +26,15 @@ Deretter installerer du Anaconda ved å åpne (kjøre) den nedlastede filen. Vel
 {% include carousel.html 
 id="myCarousel" 
 images="
-/assets/img/windows/installation_1.png, 
-/assets/img/windows/installation_2.png,
-/assets/img/windows/installation_3.png,
-/assets/img/windows/installation_4.png,
-/assets/img/windows/installation_5.png,
-/assets/img/windows/installation_6.png,
-/assets/img/windows/installation_7.png,
-/assets/img/windows/installation_8.png,
-/assets/img/windows/installation_9.png" 
+installation_1.png, 
+installation_2.png,
+installation_3.png,
+installation_4.png,
+installation_5.png,
+installation_6.png,
+installation_7.png,
+installation_8.png,
+installation_9.png" 
 %}
 
 ## Åpne Spyder
@@ -47,8 +45,8 @@ Vi skal åpne Spyder gjennom *Anaconda-Navigator*. Når vi åpner Anaconda-Navig
 {% include carousel.html 
 id="anacondaCarousel"
 images="
-/assets/img/windows/open_anaconda_nav.png,
-/assets/img/windows/open_spyder.png"
+open_anaconda_nav.png,
+open_spyder.png"
 %}
 Over vises hvordan du åpner Anaconda og deretter åpner *Spyder*. 
 
@@ -59,7 +57,7 @@ Det er vanlig å bruke symbolet `>>` om *konsoll*, dvs. *det stedet der du gir p
 
 Den første sjekken er `>> print("Hello, World!")` (trykk enter for å kjøre kommandoen). 
 
-{% include figure.html file="/assets/img/windows/spyder_1.png" caption="Spyder. Til venstre er en kode-editor, nede til høre er det en IPython-konsoll. I Spyder skriver du kommandoer bak <code class='highlighter rouge'>ln [1]:</code>, eller kjører en hel fil, som egentlig tilsvarer å sende inn filen linje for linje til IPython-konsollen." %}
+{% include figure.html file="spyder_1.png" caption="Spyder. Til venstre er en kode-editor, nede til høre er det en IPython-konsoll. I Spyder skriver du kommandoer bak <code class='highlighter rouge'>ln [1]:</code>, eller kjører en hel fil, som egentlig tilsvarer å sende inn filen linje for linje til IPython-konsollen." %}
 
 Dersom dette har gått bra printes `Hello, World!` i konsollen. 
 
@@ -78,7 +76,7 @@ ylabel("amplitude")
 
 Første gang en fil kjøres kommer følgende vindu opp: 
 
-{% include figure.html width="w-100" file="/assets/img/windows/spyder_3.png" caption="Anbefalte innstillinger er slik som på dette bildet." %}
+{% include figure.html width="w-100" file="spyder_3.png" caption="Anbefalte innstillinger er slik som på dette bildet." %}
 
 
 Dersom alt har gått bra skal du nå få opp en figur som viser plottet av funksjonen $$A = t^2$$. Dersom dette ikke fungerer bør du ha fått opp en feilmelding.  
@@ -95,15 +93,15 @@ Det er mange innstillinger i Anaconda, og mange ting er smak og behag. For at al
 
 Sett "Remove all variables before execution", fordi det sørger for at samme script git samme resultat hver gang. Om du velger å beholde variable kan du i enkelte tilfeller få svært uventet oppførsel. For at dette skal bli standard oppfølsel må du også ordne dette under "Preferences".
 
-{% include figure.html width="w-100" file="/assets/img/windows/spyder_settings_1.png" caption="Kjøreinnstillinger" %}
+{% include figure.html width="w-100" file="spyder_settings_1.png" caption="Kjøreinnstillinger" %}
 
 Du kan velge om du vil at figurer skal dukke opp *inline*, altså sammen med programoutput, eller om du vil at de skal dukke opp i egne vinduer. I det siste tilfellet har du anledning til å interagere med figurene (zoom, pan etc.). Dette er en instilling du kan variere etter behov. Noen ganger lager du mange figurer som skal se ut slik som de kommer ut av plot-kommandoen -- da er *inline* mest effektivt. Andre ganger skal du kanskje studere figurer mer nøye, og trenger å interagere med dem. Alternativet du bruker da er (selv om navnet ikke avslører oppførselen) *Automatic*.
 
-{% include figure.html width="w-100" file="/assets/img/windows/spyder_settings_2.png" caption="Innstillinger for IPython-konsollen" %}
+{% include figure.html width="w-100" file="spyder_settings_2.png" caption="Innstillinger for IPython-konsollen" %}
 
 Etter å ha valgt *Automatic* kan du sjekke at alt er i orden. Figuren skal nå komme opp i et eget vindu. Det kan hende du må restarte Spyder for at endringen skal tre i kraft. 
 
-{% include figure.html width="w-100" file="/assets/img/windows/plot_separate_window.png" caption="Når du plotter med automatic skal det se omtrent slik ut, altså at plottet dukker opp i et eget vindu foran Spyder-vinduet." %}
+{% include figure.html width="w-100" file="plot_separate_window.png" caption="Når du plotter med automatic skal det se omtrent slik ut, altså at plottet dukker opp i et eget vindu foran Spyder-vinduet." %}
 
 ### Det var det hele
 Dersom alt har gått bra med installasjonen og testingen ned hit, så har du oppsettet klart for kurset. Vi sees.
