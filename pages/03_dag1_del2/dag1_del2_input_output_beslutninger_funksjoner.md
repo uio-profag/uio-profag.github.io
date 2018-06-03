@@ -1,3 +1,9 @@
+---
+layout: page
+title: Input, output, beslutninger, funksjoner
+sidebar_link: true
+---
+
 
 # Input, output, beslutninger, funksjoner
 *Kursdag 1, del 2*
