@@ -2,11 +2,11 @@
 layout: page
 title:  "Installasjon av Anaconda for Windows"
 ---
-Denne nettsiden fungerer ikke så bra med Internet Explorer, anbefaler å bruke Chrome, Firefox eller Safari. 
+Denne nettsiden fungerer ikke så bra med Internet Explorer. Vi anbefaler å bruke Chrome, Firefox eller Safari. 
 
 ## Last ned Anaconda 
-Last ned Anaconda fra [Anaconda][anaconda]{:target="_blank"} sitt nettsted. ![Download]({{ "download_button.png" }})-knapp finnes øverst i høyre hjørne. Etter å ha klikket på denne lander du på en side med flere nedlastingsvalg. 
-Vanligvis vil nettstedet se hvilket operativsystem du har. Dersom den ikke gjør det velger du manuelt mellom MacOS, Windows eller Linux. 
+Last ned Anaconda fra [Anaconda][anaconda]{:target="_blank"} sitt nettsted. {% include button.html button_name="Download" button_class="btn-success" %}-knapp finnes øverst i høyre hjørne. Etter å ha klikket på denne lander du på en side med flere nedlastingsvalg. 
+Vanligvis vil nettstedet se hvilket operativsystem du har. Dersom det ikke gjør det velger du manuelt mellom MacOS, Windows eller Linux. 
 
 Under ser du nettsidene du vil møte under nedlastingen. (Klikk på pilene for å navigere i bildeserien)
 {% include carousel.html 
@@ -50,7 +50,7 @@ open_spyder.png"
 %}
 Over vises hvordan du åpner Anaconda og deretter åpner *Spyder*. 
 
-Når du åpner spyder for første gang kan det hende det dukker opp en beskjed om at spyder ikke er oppdatert. Denne kan ignoreres foreløpig, men det er også trygt oppdatere Spyder. 
+Når du åpner Spyder for første gang kan det hende det dukker opp en beskjed om at Spyder ikke er oppdatert. Denne kan du ignorerere (lukke) foreløpig, men det er også trygt oppdatere Spyder. 
 
 ## Sjekk at anaconda-installasjonen fungerer som den skal 
 Det er vanlig å bruke symbolet `>>` om *konsoll*, dvs. *det stedet der du gir python-kommandoer*, altså at du gir en instruksjon til python-interpreteren på maskinen. Dette svarer til det stedet i Anaconda der du kan skrive inn kommandoer direkte (se bilde). I Anaconda sin konsoll vil det vi nettopp har kalt `>>` se ut som `ln [1]:`, men der tallet inne i klammene vil variere etter hvor mange kommandoer du har kjørt side du startet Spyder. 
@@ -63,7 +63,7 @@ Dersom dette har gått bra printes `Hello, World!` i konsollen.
 
 
 ### Er anaconda installert med nødvendige pakker?
-Kopier innholdet i kodesnutten under, og legg det inn i et nytt script i Anaconda (i venstre del av vinduet). Kjør deretter scriptet ved å trykke på den grønne play-knappen. Det vi ønsker å sjekke her er at du får importert bibliotekene som ligger i `pylab`, og gjøre et par tester på at noe av det inni bibliotekene fungerer. 
+Når vi skal kjøre mer enn en linje med kode er det bedre å legge koden i en fil enn å skrive den rett inn i konsollen. Dette gjør vi med *editoren* på venstre side i Spyder. Kopier innholdet i kodesnutten under, og legg det inn i et nytt script i Anaconda. Kjør deretter scriptet ved å trykke på den grønne play-knappen. Det vi ønsker å sjekke her er at du får importert bibliotekene som ligger i `pylab`, og gjøre et par tester på at noe av det inni bibliotekene fungerer. 
 
 {% highlight python %}
 from pylab import *
@@ -78,28 +78,22 @@ Første gang en fil kjøres kommer følgende vindu opp:
 
 {% include figure.html width="w-100" file="spyder_3.png" caption="Anbefalte innstillinger er slik som på dette bildet." %}
 
-
 Dersom alt har gått bra skal du nå få opp en figur som viser plottet av funksjonen $$A = t^2$$. Dersom dette ikke fungerer bør du ha fått opp en feilmelding.  
 
 Dersom du skulle få behov for å installere moduler som mangler, gjør du det i "Environments" i Anaconda-Navigator (Men det er lite trolig at det blir nødvendig). 
 
-#### Installere pygame
-Må gjøres med pip
-#### Installere scipy-special
-Kan gjøres med conda
-
 ### Innstillinger i Anaconda
-Det er mange innstillinger i Anaconda, og mange ting er smak og behag. For at alle skal ha samme oppsett når vi er på kurs, slik at vi unngår unødig feilsøking, har vi følgende forslag til innstillinger: 
-
-Sett "Remove all variables before execution", fordi det sørger for at samme script git samme resultat hver gang. Om du velger å beholde variable kan du i enkelte tilfeller få svært uventet oppførsel. For at dette skal bli standard oppfølsel må du også ordne dette under "Preferences".
+Det er mange innstillinger i Anaconda, og mange ting er smak og behag. For at alle skal ha samme oppsett når vi er på kurs, slik at vi unngår unødig feilsøking, har vi følgende forslag til innstillinger (Du får opp innstillinger ved å trykke på skiftenøkkelen): 
 
 {% include figure.html width="w-100" file="spyder_settings_1.png" caption="Kjøreinnstillinger" %}
+
+Sett "Remove all variables before execution", fordi det sørger for at samme script git samme resultat hver gang. Om du velger å beholde variable kan du i enkelte tilfeller få svært uventet oppførsel.
 
 Du kan velge om du vil at figurer skal dukke opp *inline*, altså sammen med programoutput, eller om du vil at de skal dukke opp i egne vinduer. I det siste tilfellet har du anledning til å interagere med figurene (zoom, pan etc.). Dette er en instilling du kan variere etter behov. Noen ganger lager du mange figurer som skal se ut slik som de kommer ut av plot-kommandoen -- da er *inline* mest effektivt. Andre ganger skal du kanskje studere figurer mer nøye, og trenger å interagere med dem. Alternativet du bruker da er (selv om navnet ikke avslører oppførselen) *Automatic*.
 
 {% include figure.html width="w-100" file="spyder_settings_2.png" caption="Innstillinger for IPython-konsollen" %}
 
-Etter å ha valgt *Automatic* kan du sjekke at alt er i orden. Figuren skal nå komme opp i et eget vindu. Det kan hende du må restarte Spyder for at endringen skal tre i kraft. 
+Etter å ha valgt *Automatic* kan du sjekke at alt er i orden ved å kjøre scriptet på nytt. Figuren skal nå komme opp i et eget vindu. Det kan hende du må restarte Spyder for at endringen skal tre i kraft. 
 
 {% include figure.html width="w-100" file="plot_separate_window.png" caption="Når du plotter med automatic skal det se omtrent slik ut, altså at plottet dukker opp i et eget vindu foran Spyder-vinduet." %}
 

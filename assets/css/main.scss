@@ -8,7 +8,9 @@
 
 .module-links {
   margin-bottom: 1rem;
+  max-width: 30rem;
 }
+
 
 #sidebar a:hover {
   text-decoration: none;
@@ -46,21 +48,9 @@
   width: 100px;
   outline: black;
   color: black;
-  background-size: 100%, 100%;
+  fill: black;
+  // background-size: 100%, 100%;
 //  border-radius: 50%;
 //  border: 1px solid black;
 //   background-image: none;
 }
-
-.carousel-control-next-icon:after
-{
-//   content: ">";
-//   font-size: 55px;
-  color: gray;
-}
-
-// .carousel-control-prev-icon:after {
-//   content: "<";
-//   font-size: 55px;
-//   color: gray;
-// }
