@@ -1,14 +1,18 @@
 ---
 layout: page
-title: test3
+title: Input, output, beslutninger, funksjoner
 sidebar_link: false
 ---
+
+
+# Input, output, beslutninger, funksjoner
+*Kursdag 1, del 2*
 
 I denne delen skal vi bruke et eksempel som innebærer hvordan å koke et egg til å lære om konseptene input/output, beslutninger, og  funksjoner/prosedyrer.
 
 ## Input/Output
 
-Man kan skrive mye kode, men programmet kommer ikke til å fortelle noe før man ber det om det. Den vanlige måten å fortelle noe ut fra et program er å bruke `print`-funksjonen. 
+Programmer forteller oss ikke hva de gjør med mindre vi ber dem om det. Altså at vi ber om en eller annenn form for output. Den vanlige måten å fortelle noe ut fra et program er å bruke `print`-funksjonen.
 
 
 ```python
@@ -18,7 +22,6 @@ print(a)
 
 # det kan være fint å skrive ut hva man skriver ut også 
 print("a: ", a)
-
 ```
 
     3
@@ -32,12 +35,39 @@ print("Hello", navn, "!")
 print("navn har type: ", type(navn))
 ```
 
-    Skriv inn navnet ditt: henrik
-    Hello henrik !
+    Skriv inn navnet ditt: Anders
+    Hello Anders !
     navn har type:  <class 'str'>
 
 
-I eksempelet under ber vi om at man skal gi noen inputs til programmet. Deretter ser vi hva vi kan gjøre med disse input'ene. 
+Man kan også gjøre litt mer sofistikert output. Det gjøres med såkalt printf-syntaks. Det innebærer at man lager en streng der noen av tegnene inne i strengen koder for hvordan en variabel skal settes inn på det stedet i strengen. For eksempel kan manskrive `print("%d" % 4)`, eller `print("%d og %d" % (3, 4))`. Hovedfordelen med denne måten å gjøre ting på er at man kan kontrollere antallet desimaler, hvor stor plass et tall skal ta, og hvorvidt output skal komme på normalform. `"%10.4f" % variabel` ber om et flyttall som skal ta opp 10 tegn med plass, og ha 4 desimaler.
+
+
+| Symbol        | Betydning    | 
+    | ---  |     --- |
+| %d      | heltall |
+| %m.nf   | flyttall <br>som tar opp m tegn med n desimaler      |
+| %m.ne    | tall på standardform <br>som tar opp m tegn med n gjeldende siffer      | 
+| %m.ng    | printf velger mellom f og g      | 
+
+
+```python
+print("%d og %d" % (3, 4))
+variabel = 230.574683646734
+print("%10.4f" % variabel)
+print("%8.4f" % variabel)
+print("%8.2f" % variabel)
+print("%8.4e" % variabel)
+```
+
+    3 og 4
+      230.5747
+    230.5747
+      230.57
+    2.3057e+02
+
+
+Vi kan også lage programmet slik at det ber om at brukeren gir noe input som programmet skal bruke. I eksempelet under ber vi om at man skal gi noen inputs til programmet. Deretter ser vi hva vi kan gjøre med disse inputs'ene.
 
 
 ```python
@@ -47,18 +77,21 @@ print("lest_input har verdi ", lest_input, " og type ", type(lest_input))
 float_input = float(lest_input)
 print("float_input har verdi ", float_input, " og type ", type(float_input))
 
+float_casted_to_int = int(float(lest_input))
+print("float_casted_to_int har verdi ", float_casted_to_int, " og type ", type(float_casted_to_int))
+
 int_input = int(lest_input)
 print("int_input har verdi ", int_input, " og type ", type(int_input))
 ```
 
-    Skriv inn et tall (prøv både en int, en float og noe som ikke er et tall): 54
-    lest_input har verdi  54  og type  <class 'str'>
-    float_input har verdi  54.0  og type  <class 'float'>
-    int_input har verdi  54  og type  <class 'int'>
+    Skriv inn et tall (prøv både en int, en float og noe som ikke er et tall): 57
+    lest_input har verdi  57  og type  <class 'str'>
+    float_input har verdi  57.0  og type  <class 'float'>
+    float_casted_to_int har verdi  57  og type  <class 'int'>
+    int_input har verdi  57  og type  <class 'int'>
 
 
-Eksempelet illustrerer at input-funksjonen leser inn det man gir den som en streng. Det er opp til programmereren å velge hvordan denne strengen skal tolkes. Dersom vi sender inn noe som kan tolkes som et tall, så kommer *casting*-funksjonene `int()` og `float()` til å klare å gjøre dem om til tall-datatyper. I dette tilfellet vil vi få feilmeldinger dersom vi sender inn noe som ikke fungerer med casting-operatorene. `int`-funksjonen er ganske streng. 
-
+Eksempelet illustrerer at input-funksjonen leser inn det man gir den som en streng. Det er opp til programmereren å velge hvordan denne strengen skal tolkes. Dersom vi sender inn noe som kan tolkes som et tall, så kommer *casting*-funksjonene `int()` og `float()` til å klare å gjøre dem om til tall-datatyper. I dette tilfellet vil vi få feilmeldinger dersom vi sender inn noe som ikke fungerer med casting-operatorene. `int`-funksjonen er ganske streng. Den vil kun oversette en streng til et heltall dersom det er det den ser. Men dersom man har et flyttall synes den det er greit å oversette det til et heltall. Også dersom flyttallet ikke egentlig er et heltall. I så fall tar den bare vekk desimalene. 
 
 ## Beslutninger (if-else-setninger)
 La oss begynne med det enkleste. Vi har testet en del, og vet at det tar omtrent 5 min å bløtkoke et egg, 7 min å mellomkoke et egg og 9 min å hardkoke et egg. 
@@ -78,6 +111,10 @@ else:
     
 ```
 
+    Hvordan vil du ha egget kokt? [bløt, medium, hard]: medium
+    Koketid: 7 minutter
+
+
 Vi kan komplisere dette mer. Det kan utledes en formel for tiden det tar å oppnå en viss temperatur i eggeplommen: 
 $$t = 0.15 \left(\frac{c}{\pi}\right)^2 \ln\left[ \frac{2(T_{vann}-T_0)}{T_{vann}-T_{plomme}}\right] $$
 der $c$ er eggets omkrets i cm, $T_{vann}$ er vanntemperaturen (om vi er ekstra nøye kan vi legge inn vannets kokepunkt som funksjon av høyde over havet). Nå kan vi stille et nytt spørsmål, memlig "hvor varm vil du ha eggeplommen?". 
@@ -87,7 +124,6 @@ der $c$ er eggets omkrets i cm, $T_{vann}$ er vanntemperaturen (om vi er ekstra 
 from pylab import *
 # evt. from pylab import *
 plommeTemperaturInput = input("Hvor varm vil du ha eggeplommen? [celsius]: ")
-t
 T_vann = 100
 T_0 = 4
 T_plomme = float(plommeTemperaturInput)
@@ -100,6 +136,11 @@ t = 0.15*(c/pi)**2*log(2*(T_vann-T_0)/(T_vann-T_plomme))
 print("Du trenger å koke egget i %.1f minutter for å oppnå en plommetemperatur på %.1f grader, dersom det kommer fra romtemperatur" % (t, T_plomme))
 ```
 
+    Hvor varm vil du ha eggeplommen? [celsius]: 72
+    Du trenger å koke egget i 4.6 minutter for å oppnå en plommetemperatur på 72.0 grader, dersom det kommer rett fra kjøleskapet
+    Du trenger å koke egget i 4.2 minutter for å oppnå en plommetemperatur på 72.0 grader, dersom det kommer fra romtemperatur
+
+
 ## Funksjoner
 
 Merk at i koden over så valgte vi å kopiere hele den linja som regner ut tiden egget skal ligge i gryta. Det er selvfølgelig helt unødvendig, og det er foretrukket å kopiere så lite kode som mulig.
@@ -110,29 +151,37 @@ La oss først se litt på funksjoner som sådan, før vi lager oss en funksjon s
 
 ```python
 def f(x):
-    return x*x
+    return x**2
 
-def kritt(svamp):
-    return svamp + 1
+def g(x): 
+    return x**3
+
+def minFunksjon(argument):
+    for i in range(10):
+        argument = str(argument) + str(i)
+    return argument
+
 
 def settSammenOrd(arg1, arg2):
     return arg1 + " " + arg2
 
 y = f(3)
-z = kritt(3)
+z = g(3)
 sammensattTekst = settSammenOrd("to", "ord")
 
 print("y: ", y)
 print("z: ", z)
+print("minFunksjon: ", minFunksjon("Hei"))
 print("sammensattTekst:", sammensattTekst)
 ```
 
     y:  9
-    z:  4
+    z:  27
+    minFunksjon:  Hei0123456789
     sammensattTekst: to ord
 
 
-Over har vi laget en veldig enkel funksjon. Det er rett og slett annengradsfunksjonen. `def`-ordet er det som forteller python at vi lager en funksjon. `f` er her navnet på funksjonen. Navnet kunne godt vært noe annet, for eksempel `kritt`. La oss prøve å bruke den: Det fungerte fint. Vi kan bruke den igjen og igjen om vi skulle ønske det. La oss nå lage en litt mer sofistikert funksjon rent matematisk.
+Over har vi laget en veldig enkel funksjon. Det er rett og slett annengradsfunksjonen. `def`-ordet er det som forteller python at vi lager en funksjon. `f` er her navnet på funksjonen. Navnet kunne godt vært noe annet, for eksempel `minFunksjon`. La oss prøve å bruke den: Det fungerte fint. Vi kan bruke den igjen og igjen om vi skulle ønske det. La oss nå lage en litt mer sofistikert funksjon rent matematisk.
 
 
 ```python
@@ -159,16 +208,18 @@ def eggeTid(T_plomme, T_vann=100, T_0 = 4, c = 2*pi*2.5):
 plommeTemperatur = float(input("Hvilken temperatur ønsker du i plommen? "))
 tid = eggeTid(plommeTemperatur)
 
-print("Du må koke egget i ", tid, "minutter")
-print("Om du glemmer deg og venter ", eggeTid(plommeTemperatur+10)-tid, " minutter for lenge blir egget 10 grader for varmt")
+print("Du må koke egget i %.2f minutter" % tid)
+print("Om du glemmer deg og venter %.2f minutter for lenge blir egget 10 grader for varmt" % (eggeTid(plommeTemperatur+10)-tid))
 ```
 
-    Hvilken temperatur ønsker du i plommen? 54
-    Du må koke egget i  5.35820240827 minutter
-    Om du glemmer deg og venter  0.919209217624  minutter for lenge blir egget 10 grader for varmt
+    Hvilken temperatur ønsker du i plommen? 72
+    Du må koke egget i 7.22 minutter
+    Om du glemmer deg og venter 1.66 minutter for lenge blir egget 10 grader for varmt
 
 
 Legg merke til at her har vi brukt vanlige matematiske operasjoner som gange `*`, dele `/` og minus `-`. I tillegg har vi brukt den naturlige logaritmen `log`. Logaritmen og mange andre funksjoner slik som `sin`, `cos`, `tan`, `exp` kommer av at vi har skrevet `from pylab import *`. Da importerer python en hel masse matematisk og annen hjelp til oss. 
+
+Som et frampek til neste økt som skal dreie seg om ploting og arrays, viser vi fram at når vi har laget en funksjon blir det også enkelt å lage plots. 
 
 
 ```python
@@ -192,11 +243,4 @@ show()
 ![png](output_18_0.png)
 
 
-## Et par ord om biblioteker
-
-Vi har brukt kommandoen `from pylab import *`. Dette er en kommando som importerer en rekke biblioteker. Som de sier selv: 
-> To make PyLab an easy to use, well packaged, well integrated, and well documented, numeric computation environment so compelling that instead of having people go to Python and discovering that it is suitable for numeric computation, they will find PyLab first and then fall in love with Python.
-
-pylab-importen sørger for at man importerer kjerneelementene i `numpy`, `scipy` og `matplotlib`. `numpy` tilbyr matematiske operasjoner på store *arrays* (ordnede samlinger av homogene data). `scipy` tilbyr alt mulig av vitenskapelige metoder, og baserer seg i stor grad på det som er tilgjengelig i `numpy`. `matplotlib` gjør at man kan plotte. 
-
-
+Plottet over viser hvor lang tid det tar å koke et egg om man ønsker en spesifikk plommetemperatur. Standardtemperatur for bløtkokt og hardkokt egg er markrt med henholdsvis grønn og rød strek.  

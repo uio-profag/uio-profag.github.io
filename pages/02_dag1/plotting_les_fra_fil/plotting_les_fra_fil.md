@@ -1,4 +1,7 @@
-
+--- 
+layout: page
+title: Plotting, les fra fil
+---
 # Plotting
 Hvis du fulgte ProFags installasjonsguide for Anaconda og Python, ble du bedt om å kjøre dette scriptet som gir et plot: 
 
