@@ -1,0 +1,13 @@
+<div class="card w-50 module-links">
+    <div class="card-header">
+        <h3>{{ include.title }}</h3>
+    </div>
+    <div class="card-body">
+{% if include.forelesningsnotat and include.published %}
+    <a href="{{ include.forelesningsnotat }}" class="btn-outline">Forelesningsnotat</a>
+{% endif %}
+{% unless include.publised %}
+    <p>Undervisningsmateriale kommer senere.</p>
+{% endunless %}
+    </div>
+</div> 

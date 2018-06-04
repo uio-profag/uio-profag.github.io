@@ -9,7 +9,30 @@ sidebar_link: True
 
 På denne siden finner du oppgaver, foiler og undervisningsnotater fra første kursdag. 
 
-Del 1: Variable [](./variable_etc/variable_etc)  
-Del 2: Input, output, beslutninger, funksjoner [](./input_output_beslutninger_funksjoner/input_output_beslutninger_funksjoner)  
-Del 3: Plotting [](./plotting_les_fra_fil/plotting_les_fra_fil)  
-Del 4: Løkker [](./lokker_etc/lokker_etc)
+{% include module_links.html title="Del 1: Variable" 
+forelesningsnotat="./variable_etc/variable_etc" 
+pdf-slides="" 
+oppgaver=""
+%}
+
+
+{% include module_links.html title="Del 2: Input, output, beslutninger, funksjoner" 
+forelesningsnotat="./input_output_beslutninger_funksjoner/input_output_beslutninger_funksjoner" 
+pdf-slides="" 
+oppgaver=""
+%}
+
+
+{% include module_links.html title="Del 3: Plotting, lesing fra fil" 
+forelesningsnotat="./plotting_les_fra_fil/plotting_les_fra_fil" 
+pdf-slides="" 
+oppgaver=""
+%}
+
+
+{% include module_links.html title="Del 4: Løkker" 
+forelesningsnotat="./lokker_etc/lokker_etc" 
+pdf-slides="" 
+oppgaver=""
+%}
+

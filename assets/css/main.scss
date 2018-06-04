@@ -6,6 +6,10 @@
 @import "bootstrap/scss/bootstrap";
 @import "hydeout";
 
+.module-links {
+  margin-bottom: 1rem;
+}
+
 #sidebar a:hover {
   text-decoration: none;
 }

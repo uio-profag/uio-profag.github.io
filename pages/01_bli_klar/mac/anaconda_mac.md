@@ -27,7 +27,7 @@ installer4_annotated.png"
 ## Åpne Spyder
 Anaconda er en stor pakke som inneholder mye forskjellig. Det viktigste den inneholder er et svært godt utvalg av Python-pakker. Anaconda tilbyr flere forskjellige innganger til å bruke disse pakkene. På kurset skal vi bruke *Spyder*.
 
-Du åpner `Spyder` gjennom `Anaconda-Navigator`. Når du åpner Anaconda-Navigator (på samme måte som ethert annet program på datamaskinen) kan du velge mellom flere alternativer under `Home`: jupyterlab, notebook, qtconsole, spyder, glueviz etc. Siden vi skal bruke Spyder på kurset, klikker du på {% include button.html button_name="Launch" button_class="btn-outline-primary btn-small" %}-knappen i boksen til nettop `Spyder`. 
+Du åpner `Spyder` gjennom `Anaconda-Navigator`. Når du åpner Anaconda-Navigator (på samme måte som ethert annet program på datamaskinen) kan du velge mellom flere alternativer under `Home`: jupyterlab, notebook, qtconsole, spyder, glueviz etc. Siden vi skal bruke `Spyder` på kurset, klikker du på {% include button.html button_name="Launch" button_class="btn-outline-primary btn-small" %}-knappen i boksen til nettop `Spyder`. 
 
 {% include figure.html file="anaconda-navigator_annotated.png" caption="Her velger man hvilken måte man vil bruke Anaconda. Vi kommer til å bruke <i>Spyder</i>" %}
 
