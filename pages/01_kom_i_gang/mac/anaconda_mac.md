@@ -4,7 +4,7 @@ title:  "Installasjon av Anaconda for MacOS"
 ---
 
 ## Last ned Anaconda 
-Last ned Anaconda fra [Anaconda][anaconda]{:target="_blank"} sitt nettsted. ![Download]({{ "download_button.png" }})-knapp finnes øverst i høyre hjørne. Etter å ha klikket på denne lander man på en side med flere nedlastingsvalg. 
+Last ned Anaconda fra [Anaconda][anaconda]{:target="_blank"} sitt nettsted. {% include button.html button_name="Download" button_class="btn-success" %}-knapp finnes øverst i høyre hjørne. Etter å ha klikket på denne lander du på en side med flere nedlastingsvalg. 
 Vanligvis vil nettstedet se hvilket operativsystem du har. Dersom den ikke gjør det velger du manuelt mellom MacOS, Windows eller Linux. 
 
 {% include figure.html file="download_site_small.jpg" caption="Nedlastingssiden til Anaconda." %}
@@ -12,8 +12,8 @@ Vanligvis vil nettstedet se hvilket operativsystem du har. Dersom den ikke gjør
 Velg Python 3.6-versjonen og klikk på den grønne download-knappen (dette gir deg 64-bit versjonen, som så å si alltid er riktig). Før nedlasting kan det hende du blir bedt om å registrere deg, da er det bare å klikke på 
 {% include button.html button_name="No Thanks" button_class="btn-outline-secondary btn-sm" %}. 
 
-## Installer anaconda
-Knapper å trykke riktig på underveis. Dette er en vanlig installer, men den trenger noe tilgang til datamaskinen. Dersom installeren ber om administratorrettigheter: ta kontakt med lokal IT-support, som vanlig ved installasjon av programmer. Dersom du har nødvendige tilganger, skal du se følgende bilder underveis i prosessen: 
+## Installer Anaconda
+Anaconda installeres med en vanlig installer. Dersom installeren ber om administratorrettigheter: ta kontakt med lokal IT-support, som vanlig ved installasjon av programmer. Dersom du har nødvendige tilganger, skal du blant annet se noe som ligner på bildene under underveis i prosessen. Du kan trykke *Continue* og *Install* hele veien. Det er ikke nødvendig å installere Microsoft VSCode, selv om installeren lurer på om du har lyst. 
 
 {% include carousel.html 
 id="myCarousel" 
@@ -25,9 +25,9 @@ installer4_annotated.png"
 %}
 
 ## Åpne Spyder
-Anaconda er en stor pakke som inneholder mye forskjellig. Det viktigste den inneholder er et svært godt utvalg av Python-pakker. Anaconda tilbyr flere forskjellige innganger til å bruke disse pakkene. Vi skal bruke *Spyder*.
+Anaconda er en stor pakke som inneholder mye forskjellig. Det viktigste den inneholder er et svært godt utvalg av Python-pakker. Anaconda tilbyr flere forskjellige innganger til å bruke disse pakkene. På kurset skal vi bruke *Spyder*.
 
-Vi skal åpne `Spyder` gjennom `Anaconda-Navigator`. Når vi åpner Anaconda-Navigator (på samme måte som ethert annet program på datamaskinen) kan vi velge mellom flere alternativer under `Home`: jupyterlab, notebook, qtconsole, spyder, glueviz etc. Vi skal bruke `Spyder`, og klikker derfor på {% include button.html button_name="Launch" button_class="btn-outline-primary btn-small" %}-knappen i boksen til nettop `Spyder`. 
+Du åpner `Spyder` gjennom `Anaconda-Navigator`. Når du åpner Anaconda-Navigator (på samme måte som ethert annet program på datamaskinen) kan du velge mellom flere alternativer under `Home`: jupyterlab, notebook, qtconsole, spyder, glueviz etc. Siden vi skal bruke Spyder på kurset, klikker du på {% include button.html button_name="Launch" button_class="btn-outline-primary btn-small" %}-knappen i boksen til nettop `Spyder`. 
 
 {% include figure.html file="anaconda-navigator_annotated.png" caption="Her velger man hvilken måte man vil bruke Anaconda. Vi kommer til å bruke <i>Spyder</i>" %}
 

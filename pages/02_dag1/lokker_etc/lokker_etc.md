@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Løkker osv.
+title: Løkker
 sidebar_link: false
 ---

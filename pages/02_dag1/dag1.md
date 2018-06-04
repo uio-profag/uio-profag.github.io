@@ -1,12 +1,15 @@
 ---
 layout: page
-title: Dag 1
+title: Kursdag 1
 sidebar_link: True
 ---
 
-På denne siden vil du finne materiale fra første kursdag. 
+**Tid:** 12. juni kl 9-16  
+**Sted:** Universitetet i Oslo
 
-[Del 1: Variable](./variable_etc/variable_etc)  
-[Del 2: Input, output, beslutninger, funksjoner](./input_output_beslutninger_funksjoner/input_output_beslutninger_funksjoner)  
-[Del 3: Plotting](./plotting_les_fra_fil/plotting_les_fra_fil)  
-[Del 4: Løkker](./lokker_etc/lokker_etc)
+På denne siden finner du oppgaver, foiler og undervisningsnotater fra første kursdag. 
+
+Del 1: Variable [](./variable_etc/variable_etc)  
+Del 2: Input, output, beslutninger, funksjoner [](./input_output_beslutninger_funksjoner/input_output_beslutninger_funksjoner)  
+Del 3: Plotting [](./plotting_les_fra_fil/plotting_les_fra_fil)  
+Del 4: Løkker [](./lokker_etc/lokker_etc)

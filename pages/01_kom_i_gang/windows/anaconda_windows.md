@@ -5,7 +5,7 @@ title:  "Installasjon av Anaconda for Windows"
 Denne nettsiden fungerer ikke så bra med Internet Explorer, anbefaler å bruke Chrome, Firefox eller Safari. 
 
 ## Last ned Anaconda 
-Last ned Anaconda fra [Anaconda][anaconda]{:target="_blank"} sitt nettsted. ![Download]({{ "download_button.png" }})-knapp finnes øverst i høyre hjørne. Etter å ha klikket på denne lander man på en side med flere nedlastingsvalg. 
+Last ned Anaconda fra [Anaconda][anaconda]{:target="_blank"} sitt nettsted. ![Download]({{ "download_button.png" }})-knapp finnes øverst i høyre hjørne. Etter å ha klikket på denne lander du på en side med flere nedlastingsvalg. 
 Vanligvis vil nettstedet se hvilket operativsystem du har. Dersom den ikke gjør det velger du manuelt mellom MacOS, Windows eller Linux. 
 
 Under ser du nettsidene du vil møte under nedlastingen. (Klikk på pilene for å navigere i bildeserien)
