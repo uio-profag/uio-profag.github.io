@@ -3,9 +3,6 @@ layout: page
 title: Input, output, beslutninger, funksjoner
 sidebar_link: false
 ---
-
-
-# Input, output, beslutninger, funksjoner
 *Kursdag 1, del 2*
 
 I denne delen skal vi bruke et eksempel som innebærer hvordan å koke et egg til å lære om konseptene input/output, beslutninger, og  funksjoner/prosedyrer.

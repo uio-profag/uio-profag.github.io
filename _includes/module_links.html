@@ -3,10 +3,15 @@
         <h2>{{ include.title }}</h2>
     </div>
     <div class="card-body">
-{% if include.forelesningsnotat and include.published %}
-    <a href="{{ include.forelesningsnotat }}" class="btn-outline">Forelesningsnotat</a>
-{% endif %}
-{% unless include.publised %}
+        {% unless include.published==false %}
+                {% if include.forelesningsnotat != "" %}
+                    <a href="{{ include.forelesningsnotat }}" class="btn btn-outline-primary materials-links">Forelesningsnotat</a>
+                {% endif %}
+                {% if include.pdf-slides != "" %}
+                    <a href="{{ include.pdf-slides }}" class="btn btn-outline-primary materials-links">Slides</a>
+                {% endif %}
+        {% endunless %}
+{% unless include.published==true %}
     <p>Undervisningsmateriale kommer senere.</p>
 {% endunless %}
     </div>
