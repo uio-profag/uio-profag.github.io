@@ -15,7 +15,7 @@ Sommerhjelpen består av et [Piazza-forum](piazza.com/uio.no/summer2018/profag) 
 
 Vi håper at Piazza blir en nyttig arena for alle som enten skal undervise i Programmering og Modellering X eller bare ønsker å lære mer om realfaglig programmering. Og vi gleder oss til å se hva dere finner på for elevene deres!
 
-Ta gjerne kontakt på [e-post](mailto:anjohan@uio.no) hvis dere har problemer med å komme inn på Piazza.
+Ta gjerne kontakt på [e-post](mailto:anjohan@uio.no) hvis du har problemer med å komme inn på Piazza.
 
 Hilsen Cathrine, Knut og Anders
 
