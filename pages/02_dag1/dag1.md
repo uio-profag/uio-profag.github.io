@@ -33,6 +33,7 @@ forelesningsnotat="./plotting_les_fra_fil/plotting_les_fra_fil"
 pdf-slides="" 
 oppgaver=""
 published=false
+custombottom="<p>Vi kommer til å bruke denne filen på undervisningsdagen: <a href='plotting_les_fra_fil/solflekker.txt'>solflekker.txt</a></p>"
 %}
 
 
