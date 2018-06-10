@@ -1,6 +1,6 @@
---- 
+---
 layout: page
-title: Plotting, les fra fil
+title: Plotting og Lese fra fil
 ---
 # Plotting
 Hvis du fulgte ProFags installasjonsguide for Anaconda og Python, ble du bedt om å kjøre dette scriptet som gir et plot: 
@@ -20,7 +20,7 @@ show()
 ```
 
 
-    <matplotlib.figure.Figure at 0x548aeb8>
+![png](output_2_0.png)
 
 
 Nå skal vi legge til et print-statement så du ser hva variabelen t faktisk inneholder
@@ -37,13 +37,14 @@ print(t)
      2.48275862 2.5862069  2.68965517 2.79310345 2.89655172 3.        ]
     
 
-**Oppgave** 
+### Underveisoppgave 
 
 Endre t fra 30 til 10 punkter. Beskriv hva det gjorde med plottet ditt. 
 
-### Didaktisk NB!
-Elevene er vant til x og y. Hvis vi kaller det x og y i programmet så er det kjent, men de venner seg ikke til å tenke «friere» - at man kan bytte om på første- og andreaksen eller kalle det noe helt annet. Det kan derfor være lurt å gi variablene logiske navn og ikke være for bundet av matematisk notasjon. 
-La oss prøve. Tenk f.eks. at du har data fra logging eller et eksperiment.
+
+### Lister med verdier
+
+Nå tenker vi at vi har data fra logging eller et eksperiment. Noen tider og noen posisjoner. Vi legger dette inn i to lister. 
 
 
 ```python
@@ -56,37 +57,39 @@ plot(posisjon,tid)      # Plotter posisjon på 1.aksen og tid på 2.aksen
 
 
 
-    [<matplotlib.lines.Line2D at 0x83a4240>]
+    [<matplotlib.lines.Line2D at 0x8afdef0>]
 
 
 
 
-![png](output_5_1.png)
+![png](output_6_1.png)
 
+
+>Elevene er vant til x og y. Hvis vi kaller det x og y i programmet så er det kjent, men de venner seg ikke til å tenke «friere» - at man kan bytte om på første- og andreaksen eller kalle det noe helt annet. Det kan derfor være lurt å gi variablene logiske navn og ikke være for bundet av matematisk notasjon. 
 
 Nå ser vi på hvordan vi kan endre på listen med tider. Tenk f.eks. at du egentlig målte hvert andre sekund. Vi prøver først med å ta 2*tid:
 
 
 ```python
 nytid=2*tid
-print("Tid= ", tid)
-print("Nytid= ", nytid)
+print("tid= ", tid)
+print("nytid= ", nytid)
 ```
 
-    Tid=  [1, 2, 3, 4, 5, 6]
-    Nytid=  [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
+    tid=  [1, 2, 3, 4, 5, 6]
+    nytid=  [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
     
 
 Du ser at dette ga en dobbelt så lang liste. Tanken var egentlig å lage denne listen: [2,4,6,8,10,12] 
 Da må vi konvertere fra liste til vektor (array) før vi ganger med 2. 
 
-### Programmerings NB! 
-*liste* og *array* er to forskjellige datatyper. Vi kan oversette *array* til matrise eller vektor. Fordi de matematiske regneoperasjonene vi skal gjøre med *arrays* likner på vektorregning har vi valgt å kalle det vektor. I ProFag skal vi for det meste bruke vektorer og unngå lister. 
+
+>*liste* og *array* er to forskjellige datatyper. Vi kan oversette *array* til matrise eller vektor. Fordi de matematiske regneoperasjonene vi skal gjøre med *arrays* likner på vektorregning har vi valgt å kalle det vektor. I ProFag skal vi for det meste bruke vektorer og unngå lister. NB! `array*array` gir ikke skalarprodukt, men `array*<tall>` tilsvarer regneoperasjon for vektorer. 
 
 
 
 ```python
-nytid=array(tid)	#konverterer fra liste til vektor
+nytid=array(tid)      #konverterer fra liste til vektor
 nytid=2*nytid
 print(nytid)
 ```
@@ -94,14 +97,15 @@ print(nytid)
     [ 2  4  6  8 10 12]
     
 
-### Oppgaver
-1) I ditt første plott lagde du variabelen t ved hjelp av kommandoen *linspace*. Lager denne kommandoen en vektor eller en liste?
+### Underveisoppgaver
+1. I ditt første plott lagde du variabelen t ved hjelp av kommandoen *linspace*. Lager denne kommandoen en vektor eller en liste?
 
-2) Finn ut hvordan lage ulike vektorer ved hjelp av *zeros* og *ones*. Se f.eks. s. 80 i ProMod-boka. Hvis du vil bruke dette til å lage en vektor som er lik den som heter nytid i vårt program, trenger du kunnskap om løkker. Det kommer i neste økt, men vi gir en smakebit nedenfor. 
+2. Finn ut hvordan lage ulike vektorer ved hjelp av *zeros* og *ones*. Se f.eks. s. 80 i ProMod-boka. Hvis du vil bruke dette til å lage en vektor som er lik den som heter nytid i vårt program, trenger du kunnskap om løkker. Det kommer i neste økt, men vi gir en smakebit nedenfor. 
 
-3) Hva skjer om du bytter ut kommandoen plot med kommandoen scatter?
+3. Hva skjer om du bytter ut kommandoen plot med kommandoen scatter?
 
-4) Prøv deg med farger, linjestil og markeringer. Se eksempel under. 
+4. Prøv deg med farger, linjestil og markeringer. Se eksempel under. 
+
 
 #### Eksempel på plot med farger, linjestil og markeringer
 
@@ -113,12 +117,12 @@ plot(tid,posisjon, "-.", color="cyan", marker="s")
 
 
 
-    [<matplotlib.lines.Line2D at 0x8860ba8>]
+    [<matplotlib.lines.Line2D at 0x8c1ef28>]
 
 
 
 
-![png](output_11_1.png)
+![png](output_12_1.png)
 
 
 #### Eksempel på bruk av løkke for å fylle en vektor med tall vi ønsker
@@ -144,25 +148,25 @@ Les gjennom program linje for linje og forklar hva som blir gjort.
 
 ```python
 from pylab import *
-x= linspace(0, 2*math.pi, 100)  #vektor går fra 0 til 2pi, med 100 steg i mellom
-sinus=sin(x)                    
+vinkel = linspace(0, 2*math.pi, 100)  #vektor går fra 0 til 2pi, med 100 steg i mellom
+sinus=sin(vinkel)                     #husk at vinkelen må være i radianer
 
-plot(x, sinus, c="magenta")
+plot(vinkel, sinus, c="magenta")
 ```
 
 
 
 
-    [<matplotlib.lines.Line2D at 0x88c5ef0>]
+    [<matplotlib.lines.Line2D at 0x8c1d780>]
 
 
 
 
-![png](output_15_1.png)
+![png](output_16_1.png)
 
 
-### Didaktisk NB!
-Elever har ikke alltid et like bevisst forhold til om vinkler gis i grader eller radianer. Det kan derfor være nyttig å vite hvoran python konverterer mellom de to. Eller du kan  gi elevene i oppgave å lage en funksjon i python som gjør denne konverteringen. 
+
+>Elever har ikke alltid et like bevisst forhold til om vinkler gis i grader eller radianer. Det kan derfor være nyttig å vite hvoran python konverterer mellom de to. Eller du kan  gi elevene i oppgave å lage en funksjon i python som gjør denne konverteringen. 
 Uansett hvilken tilnærming du velger i klassen: Her ser du hvordan du kan konvertere til radianer slik at den innebygde funksjonen *sin*  regner riktig når vinkelmålet blir gitt i grader. 
 
 
@@ -178,29 +182,77 @@ print("Sinus av 30 grader =",a)
     Sinus av 30 grader = 0.49999999999999994
     
 
-### Diskusjonsoppgaver
-1) Det går fint an å bruke svært mye tid på å pynte på plot. Hvordan styre dette i klassen?
-2) Hva er forskjellen på å plotte i Python og Geogebra? Diskuter fordeler og ulemper med å bruke disse programmene til plotting.
 
-### Fordypningsoppgaver (sommer-moro?)
-1) Lag en funksjon som plotter sinus. Funksjonen skal ta argumentene sinusplot(amplitude, k, faseforskyvning, likevektslinje, stil) 
-eller skal de heller få programmet og forklare det og lage tilsvarende, men med noen andre argumenter?
+### Diskusjon
+1. Det går fint an å bruke svært mye tid på å pynte på plot. Hvordan styre dette i klassen?
+2. Hva er forskjellen på å plotte i Python og Geogebra? Diskuter fordeler og ulemper med å bruke disse programmene til plotting.
 
-2) bruk programmet fra oppgaven over og plot tre ulike sinusfunksjoner med ulik linjestil
-a - i samme vindu
-b - i tre vinduer som ligger ved siden av hverandre 
-
-hint: se ProMod boka avsnitt 5.2
-
-eller skal oppgaven være: 
-Her ser du output fra et program ... (viser tre plot i samme vindu og tre plot ved siden av hverandre). De er laget ved hjelp av å definere en funksjon som tar følgende argument...
-
-eller?
 
 # Lese fra fil
-Python-programmer har filekstenksjon .py
-Tekstfiler har filekstenskjon .txt
-Vi skal begynne med å lage en enkel .txt fil som vi leser fra. 
-Åpne Spyder og velg "lagre som tekstfil.txt"
+Python-programmer har filending .py
+Tekstfiler har filending .txt
+Vi skal begynne med å lage en enkel .txt fil som vi leser fra. Vi kan lage denne filen i Spyder. 
+Det blir enklest om du legger .txt filen i samme mappe som programmet kjører fra. Hvis ikke må du ha med hele filbanen. 
+
+Åpne en ny fil i Spyder og velg "lagre som" og kall filen f.eks.  tidogposisjon_profag.txt
+Legg inn to kolonner med tall. Du trenger bare et vanlig mellomrom mellom tallene. 
 
 
+```
+1 1.0
+2 2.4
+3 1.3
+4 0.2
+5 0.5
+6 2.0
+```
+
+Nå skal du lage et program som kan lese verdiene i denne filen. Det ser slik ut: 
+
+
+```python
+#Lese fra fil
+from pylab import *       #må ha med denne for å bruke funksjonen loadtxt
+data = loadtxt("tidogposisjon_profag.txt")     #husk at du må ha filen tilgjengelig
+tid = data[:,0]           
+posisjon = data[:,1]
+```
+
+loadtxt har mange muligheter som vi ikke har gått inn på her. Du kan f.eks. hoppe over et gitt antall rader, velge ut spesifikke kolonner etc. 
+Hvis du googler "numpy loadtxt" så kan du finne en nettside fra SciPy.org som forklarer dette nærmere. Prøv deg frem :)
+
+### Underveisoppgaver
+1. Forklar hva programmet ovenfor (lese fra fil) gjør ved å lage kommentarer i programmet. Hva kommer til å ligge i variabelen tid? Og hva vil ligge i variabelen posisjon? Sjekk om du hadde rett.
+
+2. Skriv ut de tre variablene data, tid og posisjon og forklar det du ser. 
+
+3. Hva skje om du bytter ut tid = data[:,0] med tid = data[1:3,0]?
+
+4. Hvordan kan du lage vektorer som dropper de to første verdiene i begge kolonner?
+
+
+### NB!
+Indekseringen i Python starter på 0. Første kolonne er i posisjon null, andre kolonne i posisjon 1 osv. Fort gjort å glemme!
+
+## Solflekkdata
+Nå skal vi lese inn data fra en ekstern fil. Filen heter sunspots.txt og er fra http://www-personal.umich.edu/~mejn/cp/programs.html, men du kan finne den på profag sine nettsider. Nå blir det litt mer interessant å bruke programmering til dette :) 
+
+1) Legg data fra filen sunspots.txt i en .txt fil i mappen som kjører Python-programmene dine. 
+
+2) Les inn data fra filen ved hjelp av kommandoen loadtxt. Legg deretter dataene inn i to vektorer. Den første kolonnen i filen beskriver måned etter 1749. Den andre kolonnen i filen er antall solflekker. 
+
+3) Lag et plott av dataene. 
+
+
+
+
+```python
+data = loadtxt("sunspots.txt", float)
+maaned = data[:,0]                        #første kolonne i datasettet blir lagt i en vektor kalt maaned
+antall = data[:,1]                        #andre kolonne i datasettet blir lagt i en vektor kalt antall
+
+#print(maaned,antall)
+plot(maaned,antall)
+xlabel("måned etter 1749")
+ylabel("antall solflekker")
+```
