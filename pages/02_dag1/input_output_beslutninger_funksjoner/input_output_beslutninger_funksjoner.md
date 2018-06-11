@@ -1,23 +1,21 @@
 ---
 layout: page
 title: Input, output, beslutninger, funksjoner
-sidebar_link: false
 ---
 *Kursdag 1, del 2*
 
-I denne delen skal vi bruke et eksempel som innebærer hvordan å koke et egg til å lære om konseptene input/output, beslutninger, og  funksjoner/prosedyrer.
+I denne delen skal vi lære om input/output, beslutninger, og  funksjoner/prosedyrer.
 
 ## Input/Output
 
-Programmer forteller oss ikke hva de gjør med mindre vi ber dem om det. Altså at vi ber om en eller annenn form for output. Den vanlige måten å fortelle noe ut fra et program er å bruke `print`-funksjonen.
+Programmer forteller oss ikke hva de gjør med mindre vi ber dem om det. Altså at vi ber om en eller annen form for output. For å skrive ut i konsollen bruker vi `print`-funksjonen. Vi skal snakke mer om funksjoner senere i denne sesjonen. Foreløpig forholder vi oss til at en funksjon er  noe som gjør noe, og som kan returnere noe. Det `print`-funksjonen gjør er at den skriver ting i konsollen. Det er derfor vi kunne se hva knut regnet på i forrige økt.
 
 
 ```python
 a = 1 + 2
-
 print(a)
 
-# det kan være fint å skrive ut hva man skriver ut også 
+# Det er en ryddig vane å også skrive ut navnet på variabelen
 print("a: ", a)
 ```
 
@@ -25,46 +23,72 @@ print("a: ", a)
     a:  3
 
 
+La oss se på hvordan vi kan hente input ved at brukeren blir bedt om å skrive noe i konsollen. For å ta input bruker vi `input`-funksjonen. I selve funksjonskallet skriver vi inn hva vi ønsker at skal printes i konsollen rett før brukeren skal gi input. `input`-Funksjonen returnerer det brukeren skrev i konsollen som en streng.  
+
 
 ```python
 navn = input("Skriv inn navnet ditt: ")
-print("Hello", navn, "!")
+print("Hello", navn, "!") 
 print("navn har type: ", type(navn))
 ```
 
-    Skriv inn navnet ditt: Anders
-    Hello Anders !
+    Skriv inn navnet ditt: Henrik
+    Hello Henrik !
     navn har type:  <class 'str'>
 
 
-Man kan også gjøre litt mer sofistikert output. Det gjøres med såkalt printf-syntaks. Det innebærer at man lager en streng der noen av tegnene inne i strengen koder for hvordan en variabel skal settes inn på det stedet i strengen. For eksempel kan manskrive `print("%d" % 4)`, eller `print("%d og %d" % (3, 4))`. Hovedfordelen med denne måten å gjøre ting på er at man kan kontrollere antallet desimaler, hvor stor plass et tall skal ta, og hvorvidt output skal komme på normalform. `"%10.4f" % variabel` ber om et flyttall som skal ta opp 10 tegn med plass, og ha 4 desimaler.
+Vi ser av kjøreeksempelet over at det brukeren skriver inn blir lagret i en variabel `navn` som har type `str`, altså en streng.
+
+### Strengformatering
+Vi kan gjøre litt mer sofistikert output ved hjelp av *strengformatering*. Det gjøres ved å lage en streng der noen av tegnene inne i strengen koder for hvordan en variabel skal settes inn på det stedet i strengen. For eksempel kan vi skrive `print("%d" % 4)`, eller `print("%d og %d" % (3, 4))`. Det er da på det stedet der det står `%` etterfulgt av ett eller flere tegn at det vil bli satt inn noe fra en variabel. Hovedfordelen med denne måten å gjøre ting på er at vi kan kontrollere antallet desimaler, hvor stor plass et tall skal ta, og hvorvidt output skal komme på standardform. `"%10.4f" % variabel` ber om et flyttall som skal ta opp 10 tegn med plass, og ha 4 desimaler.
+
+Vi kan også velge å ikke sette hvor stor plass tallet skal ta. Da skriver vi f. eks. `%.2f` for å få et tall med 2 desimaler. Strengformatering er en noe vi gjør med strenger, men det er veldig vanlig å bruke det sammen med print-funksjonen. 
 
 
 | Symbol        | Betydning    | 
     | ---  |     --- |
-| %d      | heltall |
-| %m.nf   | flyttall <br>som tar opp m tegn med n desimaler      |
-| %m.ne    | tall på standardform <br>som tar opp m tegn med n gjeldende siffer      | 
-| %m.ng    | printf velger mellom f og g      | 
+| `%d`      | heltall |
+| `%m.nf`   | flyttall <br>som tar opp `m` tegn med `n` desimaler      |
+| `%m.ne`    | tall på standardform <br>som tar opp `m` tegn med `n` gjeldende siffer      | 
+| `%m.ng`    | velger mellom flyttall og standardform automatisk     | 
+
+![strengformatering.png](strengformatering.png)
+
+### Eksempler med strengformatering og output
+Under finnes noen eksemplet på bruk av strengformatering.
 
 
 ```python
+# I forelesning
+minSaldo = 744.37
+print("Jeg har %7.2f kroner" % minSaldo)
+print("Jeg har %10.4f kroner" % minSaldo)
+
+# Med flere variable
 print("%d og %d" % (3, 4))
+
+mittKontonummer = 51005678987
+print("Jeg har %7.2f kroner på kontonummer %d" % (minSaldo, mittKontonummer))
+
+# For ordens skyld. Dette med %-notasjon er egentlig noe som hører til strenger, ikke print-fuksjonen. 
+minStreng = "Jeg har %7.2f kroner på kontonummer %d" % (minSaldo, mittKontonummer)
+print(minStreng)
+
+# Ekstra: bruke standardform i output
 variabel = 230.574683646734
-print("%10.4f" % variabel)
-print("%8.4f" % variabel)
-print("%8.2f" % variabel)
 print("%8.4e" % variabel)
 ```
 
+    Jeg har  744.37 kroner
+    Jeg har   744.3700 kroner
     3 og 4
-      230.5747
-    230.5747
-      230.57
+    Jeg har  744.37 kroner på kontonummer 51005678987
+    Jeg har  744.37 kroner på kontonummer 51005678987
     2.3057e+02
 
 
-Vi kan også lage programmet slik at det ber om at brukeren gir noe input som programmet skal bruke. I eksempelet under ber vi om at man skal gi noen inputs til programmet. Deretter ser vi hva vi kan gjøre med disse inputs'ene.
+### Input må vanligvis *castes*
+Vi nevnte i innføringen av `input`-funksjonen at den returnerer det brukeren skriver inn som `str`, streng. I eksempelet under ser vi hva som kan skje ved forskjellige behandlinger av input. Det er ikke alt som går bra. 
 
 
 ```python
@@ -81,163 +105,281 @@ int_input = int(lest_input)
 print("int_input har verdi ", int_input, " og type ", type(int_input))
 ```
 
-    Skriv inn et tall (prøv både en int, en float og noe som ikke er et tall): 57
-    lest_input har verdi  57  og type  <class 'str'>
-    float_input har verdi  57.0  og type  <class 'float'>
-    float_casted_to_int har verdi  57  og type  <class 'int'>
-    int_input har verdi  57  og type  <class 'int'>
+    Skriv inn et tall (prøv både en int, en float og noe som ikke er et tall): 456.7
+    lest_input har verdi  456.7  og type  <class 'str'>
+    float_input har verdi  456.7  og type  <class 'float'>
+    float_casted_to_int har verdi  456  og type  <class 'int'>
 
 
-Eksempelet illustrerer at input-funksjonen leser inn det man gir den som en streng. Det er opp til programmereren å velge hvordan denne strengen skal tolkes. Dersom vi sender inn noe som kan tolkes som et tall, så kommer *casting*-funksjonene `int()` og `float()` til å klare å gjøre dem om til tall-datatyper. I dette tilfellet vil vi få feilmeldinger dersom vi sender inn noe som ikke fungerer med casting-operatorene. `int`-funksjonen er ganske streng. Den vil kun oversette en streng til et heltall dersom det er det den ser. Men dersom man har et flyttall synes den det er greit å oversette det til et heltall. Også dersom flyttallet ikke egentlig er et heltall. I så fall tar den bare vekk desimalene. 
 
-## Beslutninger (if-else-setninger)
-La oss begynne med det enkleste. Vi har testet en del, og vet at det tar omtrent 5 min å bløtkoke et egg, 7 min å mellomkoke et egg og 9 min å hardkoke et egg. 
+    ---------------------------------------------------------------------------
+
+    ValueError                                Traceback (most recent call last)
+
+    <ipython-input-11-ee60755aa770> in <module>()
+          8 print("float_casted_to_int har verdi ", float_casted_to_int, " og type ", type(float_casted_to_int))
+          9 
+    ---> 10 int_input = int(lest_input)
+         11 print("int_input har verdi ", int_input, " og type ", type(int_input))
+
+
+    ValueError: invalid literal for int() with base 10: '456.7'
+
+
+Eksempelet illustrerer at input-funksjonen leser inn det man gir den som en streng. Det er opp til programmereren å velge hvordan denne strengen skal tolkes. Dersom vi sender inn noe som kan tolkes som et tall, så kommer *casting*-funksjonene `int()` og `float()` til å klare å gjøre dem om til tall-datatyper. I dette tilfellet vil vi få feilmeldinger dersom vi sender inn noe som ikke fungerer med casting-operatorene. `int`-funksjonen er ganske streng, og vi gi en feilmelding (ValueError) om den får en streng som ikke er et heltall. Men dersom man har et flyttall synes den det er greit å oversette det til et heltall. Også dersom flyttallet ikke egentlig er et heltall. I så fall tar den bare vekk desimalene. 
+
+### Underveisoppgave
+Lag et program som spør hvor mange meter over havet noen befinner seg, og deretter printer `<n> moh er <m> % av høyden til Mount Everest`. 
 
 
 ```python
-koketype = input("Hvordan vil du ha egget kokt? [bløt, medium, hard]: ")
+hoydeStreng = input("Hvor høyt sitter du? ")
+hoyde = float(hoydeStreng)
+prosentAndel = hoyde/8848*100
+print("Du er på %.2f prosent av Mount Everest ved %.2f meter" % (prosentAndel, hoyde))
+```
 
-if koketype == "bløt":
-    print("Koketid: 5 minutter")
-elif koketype == "medium":
-    print("Koketid: 7 minutter")
-elif koketype == "hard":
-    print("Koketid: 9 minutter")
+    Hvor høyt sitter du? 345.6
+    Du er på 3.91 prosent av Mount Everest ved 345.60 meter
+
+
+## Beslutninger (if-elif-else-setninger)
+
+I progamflyt ønsker vi ofte at et program skal gjøre forskjellige ting basert på hva som er tilstanden i programmet. For eksempel kan det hende vi er i ferd med å sende inn en variabel til en matematisk funksjon, men at variabelen er utenfor gyldighetsområdet til funksjonen. Da bør vi ha testet på forhånd at variabelen er innenfor gyldighetsområdet, og gitt brukeren en advarsel. (evt: For eksempel skal et billettsystem gjøre forskjellige ting om det detekterer en gyldig billett enn en ugyldig)
+
+if-elif-else-setninger kan skrives på følgende måte:
+```python
+if <kriterium>:
+    <utfør noe>
+elif <et annet kriterium>:
+    <utfør noe annet>
 else:
-    print("Gjenkjenner ikke koketype: ", koketype)
+    <utfør enda noe annet>
+```
+Her er det flere ting å merke seg. Først: koden under `if` er rykket inn. Det er den koden som er rykket inn som vil bli kjørt dersom `<kriterium>` slår til. 
+
+La oss begynne med det enkleste. Vi har testet en del, og vet at det tar omtrent 5 min å bløtkoke et egg, 7 min å mellomkoke et egg og 9 min å hardkoke et egg. Her bruker vi en if-test. Der skriver vi testen, og deretter må vi *indentere* den blokken med kode som skal eksekvere om testen slår til.
+
+### Boolske uttrykk
+Før vi kan gå løs på dette med `<kriterium>`, må vi egentlig si noe om hva et slikt kriterium er. Og hva det er, det er "sant" eller "usant", i Python `True` eller `False`. Derfor bruker vi gjerne boolske uttrykk. Boolske uttrykk er uttrykk som produserer "sant" eller "usant". Vi har forklart noen boolske uttrykk som kan brukes i Python i tabellen under. 
+
+| Operator        | Betydning    | 
+    | ---  |     --- |
+| `a == b`      | `True` om `a` og `b` har samme verdi |
+| `a > b`   | `True` om `a` har større verdi enn `b`  |
+| `a >= b`   | `True` om `a` har større enn eller lik verdi som `b`  |
+
+
+```python
+eggeType = input("Hvordan vil du ha egget? \
+                 (bløt/smilende/hard) ")
+
+if eggeType == "bløt":
+    print("Du må koke egget i 5 minutter")
+elif eggeType == "smilende":
+    print("Du må koke egget i 7 minutter")
+elif eggeType =="hard":
+    print("Du må koke egget i 9 minutter")
+else:
+    print("Jeg vet ikke om slike egg:", eggeType)
     
 ```
 
-    Hvordan vil du ha egget kokt? [bløt, medium, hard]: medium
-    Koketid: 7 minutter
+    Hvordan vil du ha egget?                  (bløt/smilende/hard) smilende
+    Du må koke egget i 7 minutter
 
 
-Vi kan komplisere dette mer. Det kan utledes en formel for tiden det tar å oppnå en viss temperatur i eggeplommen: 
-$$t = 0.15 \left(\frac{c}{\pi}\right)^2 \ln\left[ \frac{2(T_{vann}-T_0)}{T_{vann}-T_{plomme}}\right] $$
-der $c$ er eggets omkrets i cm, $T_{vann}$ er vanntemperaturen (om vi er ekstra nøye kan vi legge inn vannets kokepunkt som funksjon av høyde over havet). Nå kan vi stille et nytt spørsmål, memlig "hvor varm vil du ha eggeplommen?". 
+### Underveisoppgave
+*Forrige oppgave var: Lag et program som spør hvor mange meter over havet noen befinner seg, og deretter printer `<n> moh er <m> % av høyden til Mount Everest`. *
+
+Utvid nå dette programmet til å kommentere brukerens altitude, med flere forskjellige kommentarer avhengig av hvor høyt vedkommende befinner seg. 
 
 
 ```python
-from pylab import *
-# evt. from pylab import *
-plommeTemperaturInput = input("Hvor varm vil du ha eggeplommen? [celsius]: ")
-T_vann = 100
-T_0 = 4
-T_plomme = float(plommeTemperaturInput)
-c = 2*pi*2 # cm
-t = 0.15*(c/pi)**2*log(2*(T_vann-T_0)/(T_vann-T_plomme))
-print("Du trenger å koke egget i %.1f minutter for å oppnå en plommetemperatur på %.1f grader, dersom det kommer rett fra kjøleskapet" % (t, T_plomme))
+hoydeStreng = input("Hvor høyt sitter du? ")
+hoyde = float(hoydeStreng)
 
-T_0 = 20
-t = 0.15*(c/pi)**2*log(2*(T_vann-T_0)/(T_vann-T_plomme))
-print("Du trenger å koke egget i %.1f minutter for å oppnå en plommetemperatur på %.1f grader, dersom det kommer fra romtemperatur" % (t, T_plomme))
+if (hoyde < 1 and hoyde > 0):
+    print("Er du på stranden?")
+elif (hoyde > 8500):
+    print("Du er kanskje på et fly?")
+else:
+    print("Jeg har ingenting å si om din altitude..")
+
 ```
 
-    Hvor varm vil du ha eggeplommen? [celsius]: 72
-    Du trenger å koke egget i 4.6 minutter for å oppnå en plommetemperatur på 72.0 grader, dersom det kommer rett fra kjøleskapet
-    Du trenger å koke egget i 4.2 minutter for å oppnå en plommetemperatur på 72.0 grader, dersom det kommer fra romtemperatur
+    Hvor høyt sitter du? 324523465
+    Du er kanskje på et fly?
 
 
 ## Funksjoner
 
-Merk at i koden over så valgte vi å kopiere hele den linja som regner ut tiden egget skal ligge i gryta. Det er selvfølgelig helt unødvendig, og det er foretrukket å kopiere så lite kode som mulig.
-Vi velger derfor å putte dette inn i en funksjon, slik at det blir litt enklere å få oversikt. Da kan vi også anvende funksjonen flere ganger.
+Fuksjoner er litt som i matematikken, men også ikke. 
+I Python kan en fuksjon ta inn ingen, ett eller flere argumenter, og returnere ingen, en eller flere variable. I spesialtilfellet at det ikke er noen returvariable kan vi kalle funksjonen for en *prosedyre*.
 
-La oss først se litt på funksjoner som sådan, før vi lager oss en funksjon som løser eggekokingen vår.
+Generelt er syntaks for en funksjon som følgende:
+```python
+def myFunction(arg1, arg2):
+    <gjør noe>
+    return <returvariable>
+```
+
+Vi skriver ordet `def` for å si til python at det kommer en funksjon, og vi definerer hvilke argumenter funksjonen skal ta. Så kommer `:`, som forteller at vi nå skal gå over til innholdet i funksjonen. Innholdet, eller *det som utføres* ligger på de neste linjene med innrykk, og innholdet i funksjonen fortsetter helt til vi kommet til en linje som ikke er rykket inn *i forhold til* `def`-ordet. Funksjonen sier seg ferdig enten når den når bunnen uten å bli sendt tilbake noe sted, eller når den møter `return`, altså der funksjonen returnerer. Vi kan returnere alt fra ingen til mange variable. Der det er flere enn én returvariabel skiller vi dem med komma. 
+
+Under viser vi fram noen forskjellge fuksjoner. 
 
 
 ```python
 def f(x):
     return x**2
 
+def pengespill(bidrag1, bidrag2):
+    myVariable = bidrag1 + bidrag2
+    if (myVariable > 4):
+        return 2*myVariable
+    else: 
+        return 0
+
+def printKineticEnergy(m, v):
+    E_k = m*v**2
+    kineticEnergyString = "E_k: %.2f J" % E_k
+    print(kineticEnergyString)
+
+print("f(2): ", f(2))
+
+print("Pengespillet gir: ", pengespill(3, 2))
+print("Pengespillet gir: ", pengespill(1, 2))
+
+printKineticEnergy(2.3, 3.4)
+
+```
+
+    f(2):  4
+    Pengespillet gir:  10
+    Pengespillet gir:  0
+    E_k: 26.59 J
+
+
+Over er `printKineticEnergy` et eksempel på en *prosedyre*
+
+
+```python
+# Noen flere eksempler
 def g(x): 
     return x**3
-
-def minFunksjon(argument):
-    for i in range(10):
-        argument = str(argument) + str(i)
-    return argument
-
 
 def settSammenOrd(arg1, arg2):
     return arg1 + " " + arg2
 
-y = f(3)
 z = g(3)
 sammensattTekst = settSammenOrd("to", "ord")
 
-print("y: ", y)
 print("z: ", z)
-print("minFunksjon: ", minFunksjon("Hei"))
 print("sammensattTekst:", sammensattTekst)
 ```
 
-    y:  9
     z:  27
-    minFunksjon:  Hei0123456789
     sammensattTekst: to ord
 
 
-Over har vi laget en veldig enkel funksjon. Det er rett og slett annengradsfunksjonen. `def`-ordet er det som forteller python at vi lager en funksjon. `f` er her navnet på funksjonen. Navnet kunne godt vært noe annet, for eksempel `minFunksjon`. La oss prøve å bruke den: Det fungerte fint. Vi kan bruke den igjen og igjen om vi skulle ønske det. La oss nå lage en litt mer sofistikert funksjon rent matematisk.
+Under bruker vi noe som heter et *keyword argument*. Det vil si en funksjonsparameter som har en standardverdi. Dette er en nyttig måte å definere parametre som ofte bruker en standardverdi, f. eks. naturkonstanter. En annen fin ting med keyword arguments er at de øker lesbaheten i koden. Når man gjør et funksjonskall gjør man det eksplisitt hvilke vedier som tilordnes hvilket argument. 
 
 
 ```python
 def f(x, y=0.2):
-    return x*y
+    return x*y**2
 
 print(f(4))
 print(f(2, 3))
+print(f(x=2, y=3))
+print(f(y=3, x=2)) # Ved bruk av keyword arguments trenger man ikke huske rekkefølgen. 
 ```
 
-    0.8
-    6
+    0.16000000000000003
+    18
+    18
+    18
 
 
-Over har vi brukt noe som heter et *keyword argument*. Det vil si et funksjonsargument som har en standardverdi. Dette er en nyttig måte å definere argumenter som ofte bruker en standardverdi, f. eks. linjefarger i plots. En annen fin ting med keyword arguments er at de øker lesbaheten i koden. Når man gjør et funksjonskall gjør man det eksplisitt hvilke vedier som tilordnes hvilket argument. 
+Legg merke til at her har vi brukt vanlige matematiske operasjoner som gange `*`, dele `/` og minus `-`. I oppgaven under skal vi i tillegg bruke den naturlige logaritmen `log` (den briggske logaritmen heter `log10`). Logaritmen og mange andre funksjoner slik som `sin`, `cos`, `tan`, `exp` kommer av at vi har skrevet `from pylab import *`. Da importerer python en hel masse matematisk og annen hjelp til oss. 
+
+ 
+
+### Underveisoppgave
+1. Lag en funksjon som regner ut kokepunktet til vann i en gitt høyde over havet: Vi velger en forenklet modell: $T_C = 100 - 0,0032 h$, der $h$ oppgis i meter, og temperaturen kommer ut i celsius. Sjekk at funksjonen returnerer riktig verdi ved havnivå (100 C) og på Mount Everest (ca. 72 C). 
+
+2. Vi skal nå koke egg. Tiden $t$ i minutter det tar å oppnå en plommetemperatur på $T_{plomme}$ kan modelleres som:
+$$t = A\ln\left[ \frac{2(T_{vann}-T_0)}{T_{vann}-T_{plomme}}\right] $$
+der $A$ er en konstant som kommer an på egget, $T_{vann}$ er vanntemperaturen i kjelen (typisk kokepunktet), $T_0$ er temperaturen i egget før det går i gryta og $T_{plomme}$ er temperaturen vi ønsker i plommen. Lag en funksjon som implementerer denne modellen, og sjekk at den gir rimelige resultater for bløtkokt (65 C) og hardkokt (85 C) egg. 
+
+3. Endre funksjonen fra 2) slik at den tar inn høyde over havet og bruker funksjonen fra 1) til å regne ut temperaturen i vannet. Hva skjer om man ber om et hardkokt egg på Mount Everest? Kan du endre programmet slik at det oppfører seg penere?
+
+
+
 
 
 ```python
 from pylab import *
 
-def eggeTid(T_plomme, T_vann=100, T_0 = 4, c = 2*pi*2.5):
-    return 0.15*(c/pi)**2*log(2*(T_vann-T_0)/(T_vann-T_plomme))
+# 1
+def kokepunkt(h):
+    return 100-0.0032*h
 
-plommeTemperatur = float(input("Hvilken temperatur ønsker du i plommen? "))
-tid = eggeTid(plommeTemperatur)
+print("Kokepunkt ved havnivå: %.2f" % kokepunkt(0))
+print("Kokepunkt på Mount Everest: %.2f" % kokepunkt(8848))
 
-print("Du må koke egget i %.2f minutter" % tid)
-print("Om du glemmer deg og venter %.2f minutter for lenge blir egget 10 grader for varmt" % (eggeTid(plommeTemperatur+10)-tid))
+# 2
+def eggeTid(T_plomme, T_vann=100, T_0 = 4, A = 3.75):
+    return A*log(2*(T_vann-T_0)/(T_vann-T_plomme))
+print("Det tar %.2f minutter å lage bløtkokt egg (65 C)" % eggeTid(65))
+print("Det tar %.2f minutter å lage hardkokt egg (85 C)" % eggeTid(85))
+
+# 3 
+def eggeTidHoyde(T_plomme, h=0, T_0 = 4, A = 3.75):
+    T_vann = kokepunkt(h)
+    return A*log(2*(T_vann-T_0)/(T_vann-T_plomme))
+
+
+def eggeTidHoyde(T_plomme, h=0, T_0 = 4, A = 3.75):
+    T_vann = kokepunkt(h)
+    if (T_vann < T_plomme):
+        print("Det går ikke an å varme et egg til %.2f grader i vann som holder %.2f grader" % (T_plomme, T_vann))
+        return nan # Dette er et spesielt tall, som ikke er et tall.
+    return A*log(2*(T_vann-T_0)/(T_vann-T_plomme))
+
+print("Det tar %.2f minutter å lage hardkokt egg (85 C) på Mount Everest (8848 m)" % eggeTidHoyde(85, h=8848))
+
 ```
 
-    Hvilken temperatur ønsker du i plommen? 72
-    Du må koke egget i 7.22 minutter
-    Om du glemmer deg og venter 1.66 minutter for lenge blir egget 10 grader for varmt
+    Kokepunkt ved havnivå: 100.00
+    Kokepunkt på Mount Everest: 71.69
+    Det tar 6.38 minutter å lage bløtkokt egg (65 C)
+    Det tar 9.56 minutter å lage hardkokt egg (85 C)
+    Det går ikke an å varme et egg til 85.00 grader i vann som holder 71.69 grader
+    Det tar nan minutter å lage hardkokt egg (85 C) på Mount Everest (8848 m)
 
 
-Legg merke til at her har vi brukt vanlige matematiske operasjoner som gange `*`, dele `/` og minus `-`. I tillegg har vi brukt den naturlige logaritmen `log`. Logaritmen og mange andre funksjoner slik som `sin`, `cos`, `tan`, `exp` kommer av at vi har skrevet `from pylab import *`. Da importerer python en hel masse matematisk og annen hjelp til oss. 
+### Underveisoppgave
 
-Som et frampek til neste økt som skal dreie seg om ploting og arrays, viser vi fram at når vi har laget en funksjon blir det også enkelt å lage plots. 
+1. Lag en funksjon som konverterer temperatur fra Fahrenheit til Celsius: $T_C = \frac{5}{9} (T_F - 32)$, og bruk funksjonen til å konvertere en variabel du har definert i selve programmet. 
 
+2. Modifiser programmet slik at det tar input fra brukeren. 
 
-```python
-temperaturer = linspace(0, 90, 1000)
-tider = np.zeros(len(temperaturer))
-for i in range(len(temperaturer)):
-    tider[i] = eggeTid(temperaturer[i])
+3. Endre funksjonen slik at den samtidig som den konverterer, også velger å si noe om temperaturen. 
 
+## Et par ord om biblioteker
 
-plot(temperaturer, tider)
-vlines(65, min(tider), max(tider), color="g", label="Bløtkokt")
-vlines(85, min(tider), max(tider), color="r", label="Hardkokt")
-xlabel("Temperatur (celsius)")
-ylabel("Tid (minutter)")
-legend()
+Vi har brukt kommandoen `from pylab import *`. Dette er en kommando som importerer en rekke biblioteker. Som de sier selv: 
+> To make PyLab an easy to use, well packaged, well integrated, and well documented, numeric computation environment so compelling that instead of having people go to Python and discovering that it is suitable for numeric computation, they will find PyLab first and then fall in love with Python.
 
-show()
-```
+pylab-importen sørger for at man importerer kjerneelementene i `numpy`, `scipy` og `matplotlib`. `numpy` tilbyr matematiske operasjoner på store *arrays* (ordnede samlinger av homogene data). `scipy` tilbyr alt mulig av vitenskapelige metoder, og baserer seg i stor grad på det som er tilgjengelig i `numpy`. `matplotlib` gjør at man kan plotte. 
 
+## Forslag til øvingsoppgaver fra læreboka i Programmering og modellering
 
-![png](output_18_0.png)
+### Input/output
+
+### Beslutninger
+
+### Funksjoner 
 
 
-Plottet over viser hvor lang tid det tar å koke et egg om man ønsker en spesifikk plommetemperatur. Standardtemperatur for bløtkokt og hardkokt egg er markrt med henholdsvis grønn og rød strek.  
