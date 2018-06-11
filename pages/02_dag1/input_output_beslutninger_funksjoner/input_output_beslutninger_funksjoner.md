@@ -158,7 +158,6 @@ else:
 ```
 Her er det flere ting å merke seg. Først: koden under `if` er rykket inn. Det er den koden som er rykket inn som vil bli kjørt dersom `<kriterium>` slår til. 
 
-La oss begynne med det enkleste. Vi har testet en del, og vet at det tar omtrent 5 min å bløtkoke et egg, 7 min å mellomkoke et egg og 9 min å hardkoke et egg. Her bruker vi en if-test. Der skriver vi testen, og deretter må vi *indentere* den blokken med kode som skal eksekvere om testen slår til.
 
 ### Boolske uttrykk
 Før vi kan gå løs på dette med `<kriterium>`, må vi egentlig si noe om hva et slikt kriterium er. Og hva det er, det er "sant" eller "usant", i Python `True` eller `False`. Derfor bruker vi gjerne boolske uttrykk. Boolske uttrykk er uttrykk som produserer "sant" eller "usant". Vi har forklart noen boolske uttrykk som kan brukes i Python i tabellen under. 
@@ -168,6 +167,9 @@ Før vi kan gå løs på dette med `<kriterium>`, må vi egentlig si noe om hva 
 | `a == b`      | `True` om `a` og `b` har samme verdi |
 | `a > b`   | `True` om `a` har større verdi enn `b`  |
 | `a >= b`   | `True` om `a` har større enn eller lik verdi som `b`  |
+
+
+La oss begynne med det enkleste. Vi har testet en del, og vet at det tar omtrent 5 min å bløtkoke et egg, 7 min å mellomkoke et egg og 9 min å hardkoke et egg. Her bruker vi en if-test. Der skriver vi testen, og deretter må vi *indentere* den blokken med kode som skal eksekvere om testen slår til.
 
 
 ```python
