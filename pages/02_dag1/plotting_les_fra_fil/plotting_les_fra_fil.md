@@ -20,7 +20,7 @@ show()
 ```
 
 
-![png](output_2_0.png)
+    <matplotlib.figure.Figure at 0x59dac50>
 
 
 Nå skal vi legge til et print-statement så du ser hva variabelen t faktisk inneholder
@@ -39,7 +39,7 @@ print(t)
 
 ### Underveisoppgave 
 
-Endre t fra 30 til 10 punkter. Beskriv hva det gjorde med plottet ditt. 
+Endre t fra 30 til 4 punkter. Beskriv hva det gjorde med plottet ditt. 
 
 
 ### Lister med verdier
@@ -51,13 +51,13 @@ Nå tenker vi at vi har data fra logging eller et eksperiment. Noen tider og noe
 tid = [1,2,3,4,5,6]     # Lager to lister, tid og posisjon
 posisjon = [1.0, 2.4, 1.3, 0.2, 0.5, 2.0]
 plot(tid,posisjon)      # Plotter tid på 1.aksen og posisjon på 2.aksen 
-plot(posisjon,tid)      # Plotter posisjon på 1.aksen og tid på 2.aksen
+# plot(posisjon,tid)      # Plotter posisjon på 1.aksen og tid på 2.aksen
 ```
 
 
 
 
-    [<matplotlib.lines.Line2D at 0x8afdef0>]
+    [<matplotlib.lines.Line2D at 0x8edb518>]
 
 
 
@@ -89,7 +89,7 @@ Da må vi konvertere fra liste til vektor (array) før vi ganger med 2.
 
 
 ```python
-nytid=array(tid)      #konverterer fra liste til vektor
+nytid=array(tid)      #konverterer fra liste til vektor (casting)
 nytid=2*nytid
 print(nytid)
 ```
@@ -148,7 +148,7 @@ Les gjennom program linje for linje og forklar hva som blir gjort.
 
 ```python
 from pylab import *
-vinkel = linspace(0, 2*math.pi, 100)  #vektor går fra 0 til 2pi, med 100 steg i mellom
+vinkel = linspace(0, 2*pi, 100)  #vektor går fra 0 til 2pi, med 100 steg i mellom
 sinus=sin(vinkel)                     #husk at vinkelen må være i radianer
 
 plot(vinkel, sinus, c="magenta")
@@ -165,6 +165,36 @@ plot(vinkel, sinus, c="magenta")
 ![png](output_16_1.png)
 
 
+Programmet hadde blitt både mer lesbart og fleksibelt om vi deklarerer variable først. Da kan det se slik ut: 
+
+
+```python
+from pylab import *
+
+#Deklarer variable
+start = 0
+slutt = 2*pi
+N = 100
+
+#Lager vektorer
+vinkel = linspace(start, slutt, N)  #vektor går fra 0 til 2pi, med 100 steg i mellom
+sinus=sin(vinkel)                     #husk at vinkelen må være i radianer
+
+#Plotter vektorene mot hverandre
+plot(vinkel, sinus, c="green")
+```
+
+
+
+
+    [<matplotlib.lines.Line2D at 0x8097828>]
+
+
+
+
+![png](output_18_1.png)
+
+
 
 >Elever har ikke alltid et like bevisst forhold til om vinkler gis i grader eller radianer. Det kan derfor være nyttig å vite hvoran python konverterer mellom de to. Eller du kan  gi elevene i oppgave å lage en funksjon i python som gjør denne konverteringen. 
 Uansett hvilken tilnærming du velger i klassen: Her ser du hvordan du kan konvertere til radianer slik at den innebygde funksjonen *sin*  regner riktig når vinkelmålet blir gitt i grader. 
@@ -174,7 +204,7 @@ Uansett hvilken tilnærming du velger i klassen: Her ser du hvordan du kan konve
 ```python
 from pylab import *
 
-a = sin(math.radians(30))
+a = sin(radians(30))
 print("Sinus av 30 grader =",a)
 
 ```
@@ -221,12 +251,49 @@ posisjon = data[:,1]
 loadtxt har mange muligheter som vi ikke har gått inn på her. Du kan f.eks. hoppe over et gitt antall rader, velge ut spesifikke kolonner etc. 
 Hvis du googler "numpy loadtxt" så kan du finne en nettside fra SciPy.org som forklarer dette nærmere. Prøv deg frem :)
 
+Du kan også bestemme hva slags datatype de innleste verdiene skal være. Hvis du ikke gir beskjed, så blir de flyttall. 
+
+
+```python
+#Lese fra fil og bestem typen til dataene
+from pylab import *       #må ha med denne for å bruke funksjonen loadtxt
+data = loadtxt("tidogposisjon_profag.txt")     #husk at du må ha filen tilgjengelig
+print("Nå har jeg ikke skrevet noe bestemt. Da blir det flyttall \n", data)
+data = loadtxt("tidogposisjon_profag.txt", int)     #husk at du må ha filen tilgjengelig
+print("Nå har jeg bestemt at dataene mine skal være heltall \n", data)
+data = loadtxt("tidogposisjon_profag.txt", str)     #husk at du må ha filen tilgjengelig
+print("Nå har jeg bestemt at dataene mine skal være strenger \n", data)
+```
+
+    Nå har jeg ikke skrevet noe bestemt. Da blir det flyttall 
+     [[1.  1. ]
+     [2.  2.4]
+     [3.  1.3]
+     [4.  0.2]
+     [5.  0.5]
+     [6.  2. ]]
+    Nå har jeg bestemt at dataene mine skal være heltall 
+     [[1 1]
+     [2 2]
+     [3 1]
+     [4 0]
+     [5 0]
+     [6 2]]
+    Nå har jeg bestemt at dataene mine skal være strenger 
+     [['1' '1.0']
+     ['2' '2.4']
+     ['3' '1.3']
+     ['4' '0.2']
+     ['5' '0.5']
+     ['6' '2.0']]
+    
+
 ### Underveisoppgaver
 1. Forklar hva programmet ovenfor (lese fra fil) gjør ved å lage kommentarer i programmet. Hva kommer til å ligge i variabelen tid? Og hva vil ligge i variabelen posisjon? Sjekk om du hadde rett.
 
 2. Skriv ut de tre variablene data, tid og posisjon og forklar det du ser. 
 
-3. Hva skje om du bytter ut tid = data[:,0] med tid = data[1:3,0]?
+3. Hva skjer om du bytter ut tid = data[:,0] med tid = data[1:3,0]?
 
 4. Hvordan kan du lage vektorer som dropper de to første verdiene i begge kolonner?
 
