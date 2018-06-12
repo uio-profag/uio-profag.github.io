@@ -14,16 +14,18 @@ title="Del 1: Variable"
 forelesningsnotat="./variable_etc/variable_etc" 
 pdf-slides="" 
 oppgaver=""
-published=false
+losningsforslag = ""
+published=true
 %}
 
 
 {% include module_links.html 
 title="Del 2: Input, output, beslutninger, funksjoner" 
 forelesningsnotat="./input_output_beslutninger_funksjoner/input_output_beslutninger_funksjoner" 
-pdf-slides="" 
+pdf-slides="./input_output_beslutninger_funksjoner/input_output_beslutninger_funksjoner.pdf" 
 oppgaver=""
-published=false
+losningsforslag = ""
+published=true
 %}
 
 
@@ -32,7 +34,8 @@ title="Del 3: Plotting, lesing fra fil"
 forelesningsnotat="./plotting_les_fra_fil/plotting_les_fra_fil" 
 pdf-slides="" 
 oppgaver=""
-published=false
+losningsforslag = ""
+published=true
 custombottom="<p>Vi kommer til å bruke denne filen på undervisningsdagen: <a href='plotting_les_fra_fil/solflekker.txt'>solflekker.txt</a></p>"
 %}
 
@@ -42,6 +45,7 @@ title="Del 4: Løkker"
 forelesningsnotat="./lokker_etc/lokker_etc" 
 pdf-slides="" 
 oppgaver=""
-published=false
+losningsforslag = ""
+published=true
 %}
 

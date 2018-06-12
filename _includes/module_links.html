@@ -10,6 +10,12 @@
                 {% if include.pdf-slides != "" %}
                     <a href="{{ include.pdf-slides }}" class="btn btn-outline-primary materials-links">Slides</a>
                 {% endif %}
+                {% if include.oppgaver != "" %}
+                    <a href="{{ include.oppgaver }}" class="btn btn-outline-primary materials-links">Oppgaver</a>
+                {% endif %}
+                {% if include.losningsforslag != "" %}
+                    <a href="{{ include.losningsforslag }}" class="btn btn-outline-primary materials-links">Løsningsforslag</a>
+                {% endif %}
         {% endunless %}
 {% unless include.published==true %}
     <p>Undervisningsmateriale kommer senere.</p>
