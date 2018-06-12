@@ -3,7 +3,6 @@ layout: page
 title: Utskrift, tall og variable i Python
 sidebar_link: false
 ---
-
 ## Forkunnskaper
 
 Før vi begynner å programmere er det greit å si noe om hva vi forventer av kursdeltagerne i ProFag:
@@ -32,7 +31,7 @@ vi lagrer filene. Dessuten trenger vi en omgivelse med et hendig brukergrensesni
 
 Alle datamaskiner har et filsystem for permanent lagring av informasjon. Filsystemet er organisert hierarkisk i mapper (foldere, «directories» på engelsk). Figuren under viser noen av mappene og en fil på min egen Mac laptop. Jeg kan referere til for eksempel mappen «Documents» som «/Macintosh HD/Users/knutm/Documents» og en av filene som «/Macintosh HD/Users/knutm/Sesjon 1.ipynb». Dette kalles filstien til filen «Sesjon 1.ipynb», altså den fullstendige adressen til filen, med sekvensen av mapper fra toppnivået inkludert.
 
-<img src="files.pdf",width=800,height=800>
+![filer](files.png)
 
 ### Spyder
 
@@ -107,7 +106,7 @@ Hvis du nå trykker på «run-knappen» skal du i utskriftsvinduet få tre linje
 3<br/>
 1+2= 3
 
-Dette illustrerer forskjellen mellom de to datatypene tekst og heltall. Du skriver inn tekst ved å omslutten den med anførselstegn, mens heltall skrives inn uten anførselstegn. Legg merke til at <tt> print("1+2=",1+2)</tt> skriver ut både en tekst og et heltall.
+Dette illustrerer forskjellen mellom de to datatypene tekst og heltall. Du skriver inn tekst ved å omslutten den med anførselstegn, mens heltall skrives inn uten anførselstegn. Legg merke til at `print("1+2=",1+2)` skriver ut både en tekst og et heltall.
 
 ### Underveisppgave
 
@@ -115,7 +114,7 @@ Gjør endringer i programmet over og se hva som skjer. Prøv å bruke andre mate
 
 ## Aritmetiske operasjoner
 
-Python har naturlig nok de vanlige aritmetiske operasjonene innebygget. Disse angis ved $+$ (addisjon), $-$ (subtraksjon), $*$ (multiplikasjon) og $/$ (divisjon). Du kan også bruke $\text{**}$ som angir eksponensiering ($\text{x**y}$ betyr $x^y$).
+Python har naturlig nok de vanlige aritmetiske operasjonene innebygget. Disse angis ved `+` (addisjon), `-` (subtraksjon), `*` (multiplikasjon) og `/` (divisjon). Du kan også bruke `**` som angir eksponensiering. `x**y` betyr $x^y$.
 
 Legg merke til at $3/4$ gir som svar 0.75. Dette kan virke naturlig, men det betyr at en operasjon med to heltall blir et desimaltall, vi ender altså utenfor datatypen heltall selv om vi begynner der. Python har en annen divisjonsoperator som gir heltallig svar, nemlig $//$. For eksempel blir $3//4=0$ (desimaldelen av svaret ignoreres).
 
@@ -243,12 +242,12 @@ Vi minner derfor om reglene for å regne ut lengre uttrykk.
 
 Et aritmetisk uttrykk regnes ut ved å gå gjennom uttrykket fra venstre til høyre flere ganger.
 
-<li> Først utføres alle operasjoner inne i parenteser. Nestede parenteser løses opp ved å begynne med det innerste
+- Først utføres alle operasjoner inne i parenteser. Nestede parenteser løses opp ved å begynne med det innerste
 nivået og gjøre bruk av de tre reglene under.
-<li> Deretter utføres alle eksponensieringer, i rekkefølge fra venstre mot høyre. Merk at eksponenter regnes ut før
+- Deretter utføres alle eksponensieringer, i rekkefølge fra venstre mot høyre. Merk at eksponenter regnes ut før
 grunntallet.
-<li> Etter dette utføres alle multiplikasjoner og divisjoner, fra venstre mot høyre.
-<li> Til slutt utføres alle addisjoner og subtraksjoner, fra venstre mot høyre.
+- Etter dette utføres alle multiplikasjoner og divisjoner, fra venstre mot høyre.
+- Til slutt utføres alle addisjoner og subtraksjoner, fra venstre mot høyre.
     
 Under finner du noen eksempler.
 
@@ -258,14 +257,14 @@ Programmer ulike uttrykk og sjekk at du forstår hvorfor resultatet blir som det
 
 Noen eksempler:
 
-Hva blir $1+2*6/4*8-1$?
+Hva blir `1+2*6/4*8-1`?
 
 Hvordan programmerer du brøken
 $$
 \frac{a+b}{c+d}?
 $$
 
-Hva blir $2**3**2$?
+Hva blir `2**3**2`?
 
 
 ## Litt mer om talltyper

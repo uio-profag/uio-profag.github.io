@@ -12,7 +12,7 @@ På denne siden legger vi ut oppgaver, foiler og undervisningsnotater fra først
 {% include module_links.html 
 title="Del 1: Variable" 
 forelesningsnotat="./variable_etc/variable_etc" 
-pdf-slides="" 
+slides="" 
 oppgaver=""
 losningsforslag = ""
 published=true
@@ -22,7 +22,7 @@ published=true
 {% include module_links.html 
 title="Del 2: Input, output, beslutninger, funksjoner" 
 forelesningsnotat="./input_output_beslutninger_funksjoner/input_output_beslutninger_funksjoner" 
-pdf-slides="./input_output_beslutninger_funksjoner/input_output_beslutninger_funksjoner.pdf" 
+slides="./input_output_beslutninger_funksjoner/input_output_beslutninger_funksjoner.pdf" 
 oppgaver=""
 losningsforslag = ""
 published=true
@@ -32,7 +32,7 @@ published=true
 {% include module_links.html 
 title="Del 3: Plotting, lesing fra fil" 
 forelesningsnotat="./plotting_les_fra_fil/plotting_les_fra_fil" 
-pdf-slides="" 
+slides="./plotting_les_fra_fil/plotting_les_fra_fil.pdf" 
 oppgaver=""
 losningsforslag = ""
 published=true
@@ -42,8 +42,8 @@ custombottom="<p>Vi kommer til å bruke denne filen på undervisningsdagen: <a h
 
 {% include module_links.html 
 title="Del 4: Løkker" 
-forelesningsnotat="./lokker_etc/lokker_etc" 
-pdf-slides="" 
+forelesningsnotat="./lokker_etc/for_og_while_lokker" 
+slides="./lokker_etc/for_og_while_lokker.pdf" 
 oppgaver=""
 losningsforslag = ""
 published=true

@@ -192,7 +192,7 @@ else:
 
 
 ### Underveisoppgave
-*Forrige oppgave var: Lag et program som spør hvor mange meter over havet noen befinner seg, og deretter printer `<n> moh er <m> % av høyden til Mount Everest`. *
+Forrige oppgave var: Lag et program som spør hvor mange meter over havet noen befinner seg, og deretter printer `<n> moh er <m> % av høyden til Mount Everest`. 
 
 Utvid nå dette programmet til å kommentere brukerens altitude, med flere forskjellige kommentarer avhengig av hvor høyt vedkommende befinner seg. 
 
@@ -319,48 +319,6 @@ der $A$ er en konstant som kommer an på egget, $T_{vann}$ er vanntemperaturen i
 
 
 
-
-```python
-from pylab import *
-
-# 1
-def kokepunkt(h):
-    return 100-0.0032*h
-
-print("Kokepunkt ved havnivå: %.2f" % kokepunkt(0))
-print("Kokepunkt på Mount Everest: %.2f" % kokepunkt(8848))
-
-# 2
-def eggeTid(T_plomme, T_vann=100, T_0 = 4, A = 3.75):
-    return A*log(2*(T_vann-T_0)/(T_vann-T_plomme))
-print("Det tar %.2f minutter å lage bløtkokt egg (65 C)" % eggeTid(65))
-print("Det tar %.2f minutter å lage hardkokt egg (85 C)" % eggeTid(85))
-
-# 3 
-def eggeTidHoyde(T_plomme, h=0, T_0 = 4, A = 3.75):
-    T_vann = kokepunkt(h)
-    return A*log(2*(T_vann-T_0)/(T_vann-T_plomme))
-
-
-def eggeTidHoyde(T_plomme, h=0, T_0 = 4, A = 3.75):
-    T_vann = kokepunkt(h)
-    if (T_vann < T_plomme):
-        print("Det går ikke an å varme et egg til %.2f grader i vann som holder %.2f grader" % (T_plomme, T_vann))
-        return nan # Dette er et spesielt tall, som ikke er et tall.
-    return A*log(2*(T_vann-T_0)/(T_vann-T_plomme))
-
-print("Det tar %.2f minutter å lage hardkokt egg (85 C) på Mount Everest (8848 m)" % eggeTidHoyde(85, h=8848))
-
-```
-
-    Kokepunkt ved havnivå: 100.00
-    Kokepunkt på Mount Everest: 71.69
-    Det tar 6.38 minutter å lage bløtkokt egg (65 C)
-    Det tar 9.56 minutter å lage hardkokt egg (85 C)
-    Det går ikke an å varme et egg til 85.00 grader i vann som holder 71.69 grader
-    Det tar nan minutter å lage hardkokt egg (85 C) på Mount Everest (8848 m)
-
-
 ### Underveisoppgave
 
 1. Lag en funksjon som konverterer temperatur fra Fahrenheit til Celsius: $T_C = \frac{5}{9} (T_F - 32)$, og bruk funksjonen til å konvertere en variabel du har definert i selve programmet. 
@@ -374,14 +332,4 @@ print("Det tar %.2f minutter å lage hardkokt egg (85 C) på Mount Everest (8848
 Vi har brukt kommandoen `from pylab import *`. Dette er en kommando som importerer en rekke biblioteker. Som de sier selv: 
 > To make PyLab an easy to use, well packaged, well integrated, and well documented, numeric computation environment so compelling that instead of having people go to Python and discovering that it is suitable for numeric computation, they will find PyLab first and then fall in love with Python.
 
-pylab-importen sørger for at man importerer kjerneelementene i `numpy`, `scipy` og `matplotlib`. `numpy` tilbyr matematiske operasjoner på store *arrays* (ordnede samlinger av homogene data). `scipy` tilbyr alt mulig av vitenskapelige metoder, og baserer seg i stor grad på det som er tilgjengelig i `numpy`. `matplotlib` gjør at man kan plotte. 
-
-## Forslag til øvingsoppgaver fra læreboka i Programmering og modellering
-
-### Input/output
-
-### Beslutninger
-
-### Funksjoner 
-
-
+pylab-importen sørger for at man importerer kjerneelementene i `numpy`, `scipy` og `matplotlib`. `numpy` tilbyr matematiske operasjoner på store *arrays* (ordnede samlinger av homogene data). `scipy` tilbyr alt mulig av vitenskapelige metoder, og baserer seg i stor grad på det som er tilgjengelig i `numpy`. `matplotlib` gjør at man kan plotte. Dersom du leter etter dokumentasjon som beskriver hvordan funksjonene i disse bibliotekene fungerer må du inn på bibliotekene sine nettsider. I praksis er det ofte enklest å Google funksjonsnavnet. Nesten alltid endar du da opp på riktig sted på internett. 
