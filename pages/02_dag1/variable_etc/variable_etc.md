@@ -7,7 +7,7 @@ sidebar_link: false
 
 Før vi begynner å programmere er det greit å si noe om hva vi forventer av kursdeltagerne i ProFag:
     Vi forventer egentlig ingen ting annet enn at dere kan grunnleggende matematikk og naturfag og er vant til å bruke en PC (eller Mac). Dessuten at dere har installert Spyder på maskinen deres og vet hvordan dere starter dette programmet. Og en ting til: at dere har lyst til å lære å programmere!
-    
+
 
 ## Hva er programmering og Python?
 
@@ -40,7 +40,7 @@ Du finner instruksjoner for hvordan du kan installere Spyder et annet sted på d
 
 Vi skal senere se at vi med Python kan skrive resultater ut til en fil. Når du kjører programmet du har skrevet inn i programvinduet kommer det opp en linje som ser ut som
 
-<tt>In[1]: runfile('/Users/knutm/.spyder-py3/temp.py', wdir='/Users/knutm/.spyder-py3')</tt>
+`In[1]: runfile('/Users/knutm/.spyder-py3/temp.py', wdir='/Users/knutm/.spyder-py3')`
 
 Dette forteller at Python utfører kommandoene i den første fila («temp.py» med full filsti) og lagrer eventuelle resultater som skrives til fil i mappen med filsti gitt etter «wdir=». Både filstier og filnavn kan endres av brukeren.
 
@@ -74,9 +74,9 @@ In[1]: runfile('/Users/knutm/test.py', wdir='/Users/knutm')
 Hello World
 ```
 
-Legg merke til at under linja som begynner med «In[1]» står det «Hello world». Dette er resultatet programmet ditt produserte. Kanskje ikke så veldig spennende, men datamaskinen har gjort det du ba den om! 
+Legg merke til at under linja som begynner med `In[1]` står det `Hello world`. Dette er resultatet programmet ditt produserte. Kanskje ikke så veldig spennende, men datamaskinen har gjort det du ba den om!
 
-### Underveisppgave 
+### Underveisppgave
 
 Før du går videre kan du endre det første programmet ditt. Prøv å endre teksten, fjern en parentes eller en av de to ". Husk at du må trykke på den grønne pila for å få utført programmet ditt.
 
@@ -101,10 +101,13 @@ print("1+2=",1+2)
 ```
 
 Hvis du nå trykker på «run-knappen» skal du i utskriftsvinduet få tre linjer:
-<tt>
-1+2<br/>
-3<br/>
-1+2= 3
+
+```
+1+2
+3
+1+2 = 3
+```
+
 
 Dette illustrerer forskjellen mellom de to datatypene tekst og heltall. Du skriver inn tekst ved å omslutten den med anførselstegn, mens heltall skrives inn uten anførselstegn. Legg merke til at `print("1+2=",1+2)` skriver ut både en tekst og et heltall.
 
@@ -114,7 +117,7 @@ Gjør endringer i programmet over og se hva som skjer. Prøv å bruke andre mate
 
 ## Aritmetiske operasjoner
 
-Python har naturlig nok de vanlige aritmetiske operasjonene innebygget. Disse angis ved `+` (addisjon), `-` (subtraksjon), `*` (multiplikasjon) og `/` (divisjon). Du kan også bruke `**` som angir eksponensiering. `x**y` betyr $x^y$.
+Python har naturlig nok de vanlige aritmetiske operasjonene innebygget. Disse angis ved `+` (addisjon), `-` (subtraksjon), `*` (multiplikasjon) og `/` (divisjon). Du kan også bruke `**` som angir eksponensiering . $\text{x**y}$ betyr $x^y$.
 
 Legg merke til at $3/4$ gir som svar 0.75. Dette kan virke naturlig, men det betyr at en operasjon med to heltall blir et desimaltall, vi ender altså utenfor datatypen heltall selv om vi begynner der. Python har en annen divisjonsoperator som gir heltallig svar, nemlig $//$. For eksempel blir $3//4=0$ (desimaldelen av svaret ignoreres).
 
@@ -154,13 +157,13 @@ s = v_0 + 0.5 a t^2.
 $$
 La oss se hvordan denne formelen kan programmeres.
 
-Bevegelsen er definert ved starthastigheten $v_0$ og aksellerasjonen $a$ — dette utgjør konstanter som vi kan tenke på som inngangsdata. Tiden $t$ vil typisk variere, mens $s$ er resultatet. 
+Bevegelsen er definert ved starthastigheten $v_0$ og aksellerasjonen $a$ — dette utgjør konstanter som vi kan tenke på som inngangsdata. Tiden $t$ vil typisk variere, mens $s$ er resultatet.
 
 
 ```python
-# 
+#
 # Programmering av bevegelsesformelen
-# s = v0 + 0.5 a t^2 der v0 er startfart, a aksellerasjon og s er tilbakelagt strekning etter t seksunder.
+# s = v0 t + 0.5 a t^2 der v0 er startfart, a aksellerasjon og s er tilbakelagt strekning etter t seksunder.
 #
 
 v0 = 10 # Gitt i meter / sekund
@@ -172,14 +175,14 @@ t = 7 # Gitt i sekunder
 
 # Vi kan programmere formelen direkte
 
-s = v0 + 0.5*a*t**2 # 
+s = v0*t + 0.5*a*t**2 #
 
 # Til slutt skriver vi ut resultatet
 
 print("Tilbakelagt strekning etter %.2f sekunder = %.2f meter" %(t, s))
 ```
 
-    Tilbakelagt strekning etter 7.00 sekunder = 250.34 meter
+    Tilbakelagt strekning etter 7.00 sekunder = 310.35 meter
 
 
 Her har jeg skrevet inn en god del kommentarer for å gjøre det lett å forstå hva programmet gjør og brukt blanke linjer for å gjøre det lettere å lese programmet. Dette er noe alle erfarer er lurt: Du trenger kanskje ikke kommentarene når du sitter der og programmerer, men det gjør det mye lettere for andre å lese koden din. Og andre inkluderer deg selv når det har gått litt tid!
@@ -193,7 +196,7 @@ $$
 x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
 $$
 
-## Litt mer om variable
+## NB! Litt mer om variable
 
 I matematikk bruker vi variable på litt forskjellige måter uten å tenke så mye over det. Tenk for eksempel over
 hva variablene betyr i de tre uttrykkene
@@ -203,8 +206,8 @@ $$
 
 I programmering er en variabel noe langt mer konkret.
 
-<em> En variabel refererer til en lagerplass i datamaskinen som kan inneholde en verdi av en gitt type.</em>
-    
+*En variabel refererer til en lagerplass i datamaskinen som kan inneholde en verdi av en gitt type.*
+
 For enkelhets skyld kan vi tenke oss at en datamaskin inneholder mange skuffer som kan inneholde en verdi av en gitt type. Med en variabel kan vi sette navn på en slik skuff.
 
 Med en slik forståelse kan vi bedre forklare hva som skjer når datamaskinen utfører programmet under som består av det vi kaller to tilordninger:
@@ -219,7 +222,7 @@ Først multipliseres de to heltallene 2 og 3 og resultatet lagres i variabelen (
 
 Dette illustrerer det grunnleggende prinsippet for hvordan tilordninger gjennomføres:
 
-<em> En tilordning utføres ved at alle variable på høyre siden av likhetstegnet erstattes med innholdet i de aktuelle variablene, operasjonene på høyre siden utføres på vanlig måte og resultatet lagres i variabelen på venstre side.</em>
+*En tilordning utføres ved at alle variable på høyre siden av likhetstegnet erstattes med innholdet i de aktuelle variablene, operasjonene på høyre siden utføres på vanlig måte og resultatet lagres i variabelen på venstre side.*
 
 ### Underveisoppgaver
 
@@ -248,7 +251,7 @@ nivået og gjøre bruk av de tre reglene under.
 grunntallet.
 - Etter dette utføres alle multiplikasjoner og divisjoner, fra venstre mot høyre.
 - Til slutt utføres alle addisjoner og subtraksjoner, fra venstre mot høyre.
-    
+
 Under finner du noen eksempler.
 
 ## Underveisoppgave
@@ -257,14 +260,14 @@ Programmer ulike uttrykk og sjekk at du forstår hvorfor resultatet blir som det
 
 Noen eksempler:
 
-Hva blir `1+2*6/4*8-1`?
+1. Hva blir `1+2*6/4*8-1`?
 
-Hvordan programmerer du brøken
-$$
+2. Hvordan programmerer du brøken
+$
 \frac{a+b}{c+d}?
-$$
+$
 
-Hva blir `2**3**2`?
+3. Hva blir `2**3**2`?
 
 
 ## Litt mer om talltyper
@@ -274,13 +277,17 @@ så mye om det, men vi kommer raskt i situasjoner der forskjellen betyr noe. For
 
 Vi vet at det  fins ingen grense for hvor mange sifre et heltall kan ha. Samtidig har enhver datamaskin endelige ressurser. Det betyr at det må settes en grense for hvor store heltall vi kan operere med.
 
-<em> En vanlig datamaskin kan bare behandle heltall som ligger i intervallet $-2^{63}$ og $2^{63}-1$.</em>
+*En vanlig datamaskin kan bare behandle heltall som ligger i intervallet $-2^{63}$ og $2^{63}-1$.*
 
 Nå er Python så hjelpsom at når disse grensene overskrides så slår noen Python-funksjoner inn og redder oss. Det betyr at Python ikke protesterer om vi forsøker å regne ut $3^{4000}$, vi får resultatet eksakt som et tall med mer enn 1900 sifre. Det kan virke imponerende, men før eller siden vil også denne programvaren svikte oss ved at utregningen tar for lang tid eller krever for mye minne, ressursene er og blir begrenset.
 
 Situasjonen er mer delikat med desimaltall. Dette kommer av at det ikke fins noen grense for hvor mange sifre et desimaltall kan ha verken til venstre eller høyre for desimalpunktet. Som for heltall kan vi bare representere et endelig antall sifre også for desimaltall. Det betyr at vi både må begrense størrelsen (antall sifre til venstre for desimalpunktet) og antall desimaler (antall sifre til høyre for desimalpunktet).
 
-<em> En vanlig datamaskin regner med omtrent 16 desimale sifre, og desimaltall på datamaskin kalles flyttall.</em>
+*En vanlig datamaskin regner med omtrent 16 desimale sifre, og desimaltall på datamaskin kalles flyttall.*
+
+### Underveisoppgave
+
+Skriv et program som regner ut tallene $a=2^{1000}$, $b=3^{1000}$ og $c=b/a$. Forsøk å forklare hva som skjer? (Størrelsen på $c$ er omtrent $10^{176}$).
 
 ### Avrundingsfeil
 
@@ -348,6 +355,18 @@ De eneste desimaltallene som kan representeres eksakt i datamaskinenen er med an
   er et positivt heltall som ikke er for stort.
 Tallet  1/10
   er ikke på denne formen, det har også en faktor 5 i nevneren, og kan derfor ikke representeres eksakt i datamaskinen.
+
+### Underveisoppgave
+
+Det går an å vise at
+$$
+0.1 = 1/16 + 1/32 + 1/256 + 1/512 + 1/4096 + 1/8192 + \cdots
+$$
+Dette er representasjonen av $0.1$ i totall-systemet, den såkalte binære representasjonen av tallet. Vi skriver det som regel kortere som
+$$
+0.1 = 0.000110011001100110011\cdots_2
+$$
+Bruk uttrykket over til å regne ut seks tilnærminger til $0.1$ med økende nøyaktighet.
 
 ### Begrensninger og muligheter
 
