@@ -12,7 +12,7 @@ På denne siden legger vi ut oppgaver, foiler og undervisningsnotater fra først
 {% include module_links.html 
 title="Del 1: Variable" 
 forelesningsnotat="./variable_etc/variable_etc" 
-slides="" 
+slides="./variable_etc/tall_variable.pdf" 
 oppgaver=""
 losningsforslag = ""
 published=true
