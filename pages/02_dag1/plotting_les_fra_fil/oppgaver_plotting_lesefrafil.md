@@ -60,7 +60,7 @@ title: Plotting og vektorer. Lese fra fil.
   - i tre vinduer som ligger ved siden av hverandre 
 hint: se ProMod boka avsnitt 5.2
 ```
-3. Oppgave 5.36 i ProMod-boka (Fysikk)
-4. Oppgave 5.37 i ProMod-boka (Kjemi)
-5. Oppgave 5.38 i ProMod-boka (Biologi
+3. Oppgave 5.36 i ProMod-boka **(Fysikk)**
+4. Oppgave 5.37 i ProMod-boka **(Kjemi)**
+5. Oppgave 5.38 i ProMod-boka **(Biologi)**
 
