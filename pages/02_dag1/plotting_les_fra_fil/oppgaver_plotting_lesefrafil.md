@@ -10,8 +10,7 @@ title: Plotting og vektorer. Lese fra fil.
 3. Lag en .txt-fil med data fra et eksperiment. Les inn dataene og plot dem. 
 4. Selvstudium: avsnitt 5.3.2 i ProMod-boka
 
-### NB! 
-Eksemplet med HR-diagram kan være misvisende for elever. For det første er konvensjonen for HR-diagram å la temperatur-aksen gå fra høye til lave temperaturer. Elevene dine kan derfor lett blir forvirret av dette eksemplet. For det andre er stjernene gitt med magnitude (ikke størrelse - dette er trykkfeil og skal rettes opp). Lav magnitude tilsvarer høy utstrålt effekt. Dette kan også virke forvirrende på elevene. 
+> Eksemplet med HR-diagram kan være misvisende for elever. For det første er konvensjonen for HR-diagram å la temperatur-aksen gå fra høye til lave temperaturer. Elevene dine kan derfor lett blir forvirret av dette eksemplet. For det andre er stjernene gitt med magnitude (ikke størrelse - dette er trykkfeil og skal rettes opp). Lav magnitude tilsvarer høy utstrålt effekt. Dette kan også virke forvirrende på elevene. 
 
 ## Oppgaver fra ProMod - innøving
 ### Lister
