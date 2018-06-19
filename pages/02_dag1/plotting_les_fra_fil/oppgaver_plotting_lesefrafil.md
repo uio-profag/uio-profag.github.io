@@ -1,5 +1,7 @@
-
-# Plotting og vektorer. Lese fra fil. 
+---
+layout: page
+title: Plotting og vektorer. Lese fra fil. 
+---
 
 ## Oppgaver fra ProFag
 

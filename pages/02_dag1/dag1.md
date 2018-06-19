@@ -33,7 +33,7 @@ published=true
 title="Del 3: Plotting, lesing fra fil" 
 forelesningsnotat="./plotting_les_fra_fil/plotting_les_fra_fil" 
 slides="./plotting_les_fra_fil/plotting_les_fra_fil.pdf" 
-oppgaver=""
+oppgaver="./plotting_les_fra_fil/oppgaver_plotting_lesefrafil"
 losningsforslag = ""
 published=true
 custombottom="<p>Vi kommer til å bruke denne filen på undervisningsdagen: <a href='plotting_les_fra_fil/solflekker.txt'>solflekker.txt</a></p>"
