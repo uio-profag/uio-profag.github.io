@@ -15,7 +15,7 @@ Under følger først noen oppgaver fra ProFag, deretter oppgaver fra læreboka i
 
 3. Endre funksjonen slik at den samtidig som den konverterer, også velger å si noe om temperaturen. 
 
-> Dette er en oppgave som er ment som mengdetrening på å lage en vanlig funksjon, og for å minne på at man kan gjøre beslutninger (if-tester) inni en funksjon. 
+> Dette er en oppgave som er ment som mengdetrening på å lage en vanlig funksjon, og for å minne på at man kan gjøre beslutninger (if-tester) inni en funksjon. Dessuten viser den veldig tydelig at funksjoner i programmering er annerledes enn fuksjoner i matematikken. 
 
 ### Eggkoking på fjellet
 
@@ -31,7 +31,38 @@ der $A$ er en konstant som kommer an på egget, $T_{vann}$ er vanntemperaturen i
 
 > I denne oppgaven ønsker vi å trene på å lage funksjoner. Både funksjoner som tar *ett* argument, og funksjoner som tar flere argumenter. I tillegg åpner denne oppgaven for å lage en fusjon som kaller på en annen funksjon. Det er et viktig konseptuelt steg å innse at man kan gjenbruke sine egne funksjoner inni nye fuksjoner. Da kan man i prinsippet lage hva som helst. 
 
-> I denne oppgaven er tiden det tar å koke egg en løsning av varmeligningen, og denne løningen ligger nok over R2/FY2-nivå. Det man imidlertid kan gjøre her er å se på hva som skjer når kan ender med å få et negativt tall inn til logaritmen. Hva er den fysiske grunnen til at det ikke bør gå bra, og hva er den matematiske grunnen?
+> I denne oppgaven er tiden det tar å koke egg en løsning av varmeligningen, og denne løningen ligger nok over R2/Fysikk 2-nivå. Det man imidlertid kan gjøre her er å se på hva som skjer når kan ender med å få et negativt tall inn til logaritmen. Hva er den fysiske grunnen til at det ikke bør gå bra, og hva er den matematiske grunnen?
 
 ## Oppgaver fra ProMod-boka
 
+```
+# Input/Output
+1.3
+1.5
+
+# Funksjoner
+1.20
+1.24
+1.25
+1.35
+
+# Beslutninger
+2.2
+2.5
+2.7
+2.10 (Velg for eksempel eventyrspillet "Programmering i klasserommet")
+```
+
+### Fagspesifikke
+```
+1.27 (Kjemi)
+1.33 (Matematikk)
+1.34 (Fysikk)
+1.36 (Matematikk R1)
+
+2.12 (Fysikk)
+2.15 (Biologi)
+```
+Det mangler en kjemioppgave under beslutninger. Hva med:
+1. Lag et program som tar inn en kjemisk formel og skriver ut hva slags stoff det er snakk om. 
+2. For ekstremt spesielt interesserte: Noe med SMILES, en kjeminotasjon. Kanskje bare tegne kjemisk formel. Kanskje noe mer. 

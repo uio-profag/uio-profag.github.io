@@ -305,27 +305,7 @@ print(f(y=3, x=2)) # Ved bruk av keyword arguments trenger man ikke huske rekkef
 
 Legg merke til at her har vi brukt vanlige matematiske operasjoner som gange `*`, dele `/` og minus `-`. I oppgaven under skal vi i tillegg bruke den naturlige logaritmen `log` (den briggske logaritmen heter `log10`). Logaritmen og mange andre funksjoner slik som `sin`, `cos`, `tan`, `exp` kommer av at vi har skrevet `from pylab import *`. Da importerer python en hel masse matematisk og annen hjelp til oss. 
 
- 
 
-### Underveisoppgave
-1. Lag en funksjon som regner ut kokepunktet til vann i en gitt høyde over havet: Vi velger en forenklet modell: $T_C = 100 - 0,0032 h$, der $h$ oppgis i meter, og temperaturen kommer ut i celsius. Sjekk at funksjonen returnerer riktig verdi ved havnivå (100 C) og på Mount Everest (ca. 72 C). 
-
-2. Vi skal nå koke egg. Tiden $t$ i minutter det tar å oppnå en plommetemperatur på $T_{plomme}$ kan modelleres som:
-$$t = A\ln\left[ \frac{2(T_{vann}-T_0)}{T_{vann}-T_{plomme}}\right] $$
-der $A$ er en konstant som kommer an på egget, $T_{vann}$ er vanntemperaturen i kjelen (typisk kokepunktet), $T_0$ er temperaturen i egget før det går i gryta og $T_{plomme}$ er temperaturen vi ønsker i plommen. Lag en funksjon som implementerer denne modellen, og sjekk at den gir rimelige resultater for bløtkokt (65 C) og hardkokt (85 C) egg. 
-
-3. Endre funksjonen fra 2) slik at den tar inn høyde over havet og bruker funksjonen fra 1) til å regne ut temperaturen i vannet. Hva skjer om man ber om et hardkokt egg på Mount Everest? Kan du endre programmet slik at det oppfører seg penere?
-
-
-
-
-### Underveisoppgave
-
-1. Lag en funksjon som konverterer temperatur fra Fahrenheit til Celsius: $T_C = \frac{5}{9} (T_F - 32)$, og bruk funksjonen til å konvertere en variabel du har definert i selve programmet. 
-
-2. Modifiser programmet slik at det tar input fra brukeren. 
-
-3. Endre funksjonen slik at den samtidig som den konverterer, også velger å si noe om temperaturen. 
 
 ## Et par ord om biblioteker
 
