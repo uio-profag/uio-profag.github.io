@@ -64,5 +64,5 @@ der $A$ er en konstant som kommer an på egget, $T_{vann}$ er vanntemperaturen i
 2.15 (Biologi)
 ```
 Det mangler en kjemioppgave under beslutninger. Hva med:
+
 1. Lag et program som tar inn en kjemisk formel og skriver ut hva slags stoff det er snakk om. 
-2. For ekstremt spesielt interesserte: Noe med SMILES, en kjeminotasjon. Kanskje bare tegne kjemisk formel. Kanskje noe mer. 
