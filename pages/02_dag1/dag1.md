@@ -23,7 +23,7 @@ published=true
 title="Del 2: Input, output, beslutninger, funksjoner" 
 forelesningsnotat="./input_output_beslutninger_funksjoner/input_output_beslutninger_funksjoner" 
 slides="./input_output_beslutninger_funksjoner/input_output_beslutninger_funksjoner.pdf" 
-oppgaver=""
+oppgaver="./input_output_beslutninger_funksjoner/input_output_beslutninger_funksjoner_oppgaver"
 losningsforslag = ""
 published=true
 %}
