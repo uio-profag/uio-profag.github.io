@@ -3,7 +3,7 @@ layout: page
 title: Oppgaver til input, output, beslutninger og funksjoner
 ---
 
-Under følger først noen oppgaver fra ProFag, deretter oppgaver fra læreboka i programmering og modellering. 
+Under følger først noen oppgaver fra ProFag, deretter oppgaver fra læreboka i programmering og modellering. Om du trenger å øve, kan der være lurt å gjøre innøvingsoppgavene fra læreboka før oppgavene fra ProFag. 
 
 ## Oppgaver fra ProFag 
 
