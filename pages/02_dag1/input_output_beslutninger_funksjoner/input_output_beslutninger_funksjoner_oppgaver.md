@@ -15,7 +15,7 @@ Under følger først noen oppgaver fra ProFag, deretter oppgaver fra læreboka i
 
 3. Endre funksjonen slik at den samtidig som den konverterer, også velger å si noe om temperaturen. 
 
-> Dette er en oppgave som er ment som mengdetrening på å lage en vanlig funksjon, og for å minne på at man kan gjøre beslutninger (if-tester) inni en funksjon. Dessuten viser den veldig tydelig at funksjoner i programmering er annerledes enn fuksjoner i matematikken. 
+> Dette er en oppgave som er ment som mengdetrening på å lage en vanlig funksjon, og for å minne på at man kan gjøre beslutninger (if-tester) inni en funksjon. Dessuten viser den veldig tydelig at funksjoner i programmering er annerledes enn funksjoner i matematikken. 
 
 ### Eggkoking på fjellet
 
