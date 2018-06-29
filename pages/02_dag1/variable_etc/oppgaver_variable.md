@@ -1,5 +1,9 @@
+---
+layout: page
+title: Variable
+sidebar_link=false
+---
 
-# Variable
 
 ## Oppgaver om aritmetikk — innøving
 
