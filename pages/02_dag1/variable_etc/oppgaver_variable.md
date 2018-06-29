@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Variable
-sidebar_link=false
+title: Utskrift, tall og variable i Python
+sidebar_link: false
 ---
-
 
 ## Oppgaver om aritmetikk — innøving
 
