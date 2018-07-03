@@ -50,5 +50,5 @@ Programmet skal lese inn de tre koeffiesientene $a$, $b$ og $c$ og skrive ut de 
 
 
 2. Hvis vi ganger med det konjugerte uttrykket $\sqrt{x^2+1}+x$ i teller og nevner og forenkler med tredje kvadratsetning
-ser vi at $f(x)$ alternativt kan skrives som $g(x)=\sqrt{x^2+1}+x$. Regn ut $g(10^8) også og sammenlign de to svarene.
+ser vi at $f(x)$ alternativt kan skrives som $g(x)=1/\left(\sqrt{x^2+1}+x\right)$. Regn ut $g(10^8)$ også og sammenlign de to svarene.
 Bruk en annen kilde som for eksempel Wolfram Alpha til å sjekke hva som er riktig svar. Kan du forklare resultatene?
