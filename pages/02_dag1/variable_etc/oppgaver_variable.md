@@ -5,23 +5,23 @@
 
 1. Overbevis deg om rekkefølgen uttrykkene under beregnes i. Programmer hvert uttrykk og sjekk at det ble riktig. 
 
-    a) ${\tt 2+3*4+6/2}$
-
-    b) ${\tt 1/2{**}3{**}2}$
-
-    c) ${\tt 1/(1+1/(1+2))}$
-
-    d) ${\tt (1+2{**}3){**}(5-3*2)}$
+    a) `2+3*4+6/2`
     
-    e) ${\tt 2{**}{-1}*3}$
+    b) `1/2**3**2`
 
-2. Gi variablene $a$, $b$ og $c$ verdier med tilordningene $a=1$, $b=2$ og $c=3.0$. Hva er verdien av $a$ etter at hver av de følgende operasjonene er utført i Python? Regn for hånd først!
+    c)  `1/(1+1/(1+2))`
 
-a) ${\tt a = a/c}$
+    d) `(1+2**3)**(5-3*2)`
+    
+    e) `2**-1*3`
 
-b) ${\tt a = b{**}+c}$
+2. Gi variablene $a$, $b$ og $c$ verdier med tilordningene `a=1`, `b=2` og `c=3.0`. Hva er verdien av `a` etter at hver av de følgende operasjonene er utført i Python? Regn for hånd først!
 
-c) ${\tt a = b/c*c/b}$
+    a) `a = a/c`
+
+    b) `a = b**+c`
+
+    c) `a = b/c*c/b`
 
 ## Oppgaver fra ProMod
 
@@ -43,9 +43,9 @@ Programmet skal lese inn de tre koeffiesientene $a$, $b$ og $c$ og skrive ut de 
 
 ## Oppgave om avrundingsfeil
 
-1. Regn ved hjelp av Python ut verdien av uttrykket $f(x)=1/\bigl(\sqrt{x^2+1}-x\bigr)$ for $x=10^8$. 
+1. Regn ved hjelp av Python ut verdien av uttrykket $f(x)=1/\left(\sqrt{x^2+1}-x\right)$ for $x=10^8$. 
 
 
 2. Hvis vi ganger med det konjugerte uttrykket $\sqrt{x^2+1}+x$ i teller og nevner og forenkler med tredje kvadratsetning
-ser vi at $f(x)$ alternativt kan skrives som $g(x)=\sqrt{x^2+1}+x$. Regn ut $g\bigl(10^8\bigr)$ også og sammenlign de to svarene.
+ser vi at $f(x)$ alternativt kan skrives som $g(x)=\sqrt{x^2+1}+x$. Regn ut $g\left(10^8\right)$ også og sammenlign de to svarene.
 Bruk en annen kilde som for eksempel Wolfram Alpha til å sjekke hva som er riktig svar. Kan du forklare resultatene?
