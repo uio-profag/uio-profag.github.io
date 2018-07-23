@@ -44,7 +44,7 @@ custombottom="<p>Vi kommer til å bruke denne filen på undervisningsdagen: <a h
 title="Del 4: Løkker" 
 forelesningsnotat="./lokker_etc/for_og_while_lokker" 
 slides="./lokker_etc/for_og_while_lokker.pdf" 
-oppgaver=""
+oppgaver="./lokker_etc/oppgaver_lokker"
 losningsforslag = ""
 published=true
 %}
