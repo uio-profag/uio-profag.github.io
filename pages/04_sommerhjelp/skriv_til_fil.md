@@ -4,7 +4,7 @@ title: Skrive til fil
 ---
 
 På første kursdag lærte du å lese fra fil. For å skrive til fil trenger du å bruke løkker. Nedenfor ser du et eksempel. Før du går gjennom eksemplet kan du forsøke å lage programmet selv. 
-I ProMod-boka avsnitt 5.3 kan du lese mer om å skrive til fil. Legg merke til at du må først åpne en fil med et filnavn du velger. Deretter skriver du inn linje for linje med kommandoen `file.write`. Til slutt lukker du filen.  
+I ProMod-boka avsnitt 5.3 kan du lese mer om å skrive til fil. Legg merke til at du først må åpne en fil med et filnavn du velger. Deretter skriver du inn linje for linje med kommandoen `file.write`. Til slutt lukker du filen.  
 
 Prøv å lag et program til denne instruksen før du ser på løsningen under: 
 Lag et program med en funksjon som regner ut posisjon ved hjelp av en bevegelseslikning for konstant akselerasjon. Funksjonen skal ta startfart og akselerasjon som argument. Deretter skal programmet regne ut posisjon for N tidsverdier mellom 0 og 10 og plotte resulatet i en veigraf. Til slutt skal data for tid og posisjon skrives til en fil. 
