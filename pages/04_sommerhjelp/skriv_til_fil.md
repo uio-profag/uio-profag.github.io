@@ -2,7 +2,7 @@
 layout: page
 title: Skrive til fil
 ---
-# Skrive til fil
+
 På første kursdag lærte du å lese fra fil. For å skrive til fil trenger du å bruke løkker. Nedenfor ser du et eksempel. Før du går gjennom eksemplet kan du forsøke å lage programmet selv. 
 I ProMod-boka avsnitt 5.3 kan du lese mer om å skrive til fil. Legg merke til at du må først åpne en fil med et filnavn du velger. Deretter skriver du inn linje for linje med kommandoen `file.write`. Til slutt lukker du filen.  
 
