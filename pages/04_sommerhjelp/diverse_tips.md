@@ -10,7 +10,7 @@ Det er mulig å programmere python på telefon og nettbrett, og det finnes flere
 
 Du kan installere en app, slik som Pythonista 3 (iOS, $10). Pythonista har pylab installert, så her vil ting fungere slik som beskrevet i ProMod-boka. Pythonista oppleves som stabil, men merk at plots ikke er interaktive. Vi har foreløpig ikke funnet noen gratis app med `pylab`-støtte.
 
-Et annet alternativ, er [repl.it](https://repl.it), eller en annen tilsvarende nettbasert tjeneste. repl.it har også en klasseromsfunksjon som er gratis så lenge man tåler at det som legges ut ligger åpent på nettet. Merk at i repl.it finnes ikke pylab. Man vil allikevel gjenfinne alle funksjonene fra pylab enten i `matplotlib`, `numpy` eller `scipy`. MEN: det er ikke direkte støtte for plotting her, så i stedet kan man lagre med `matplotlib.savefig`:
+Et annet alternativ, er [repl.it](https://repl.it), eller en annen tilsvarende nettbasert tjeneste. repl.it har også en klasseromsfunksjon som er gratis så lenge man tåler at det som legges ut ligger åpent på nettet. Merk at i repl.it finnes ikke pylab. Man vil allikevel gjenfinne alle funksjonene fra pylab enten i `matplotlib`, `numpy` eller `scipy`. MEN: det er ikke direkte støtte for plotting her, så i stedet kan man lagre med `matplotlib.pyplot.savefig`:
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
