@@ -2,7 +2,7 @@
 layout: page
 title: Tilfeldige tall
 ---
-På kursdag 1 fikk vi ikke tid til å vise dere noe om tilfeldige tall. I dagens læreplaner er det spesielt i matematikkens sannsynlighetsregning at vi får vi bruk for dette. Tilfeldige bevegelser og utvalg har generelt blitt oppfattet som for krevende å regne på i andre fagområder på skolenivå. Men kanskje dette kan endre seg når vi får inn mer programmering i fagene. Tenkt på diffusjon, radioaktivitet og smittespredning. Programmering med tilfeldige tall og statistisk analyse kan åpne en ny verden av motiverende og virkelighetsnære problemstillinger.
+På kursdag 1 fikk vi ikke tid til å vise dere noe om tilfeldige tall. I dagens læreplaner er det spesielt i matematikkens sannsynlighetsregning at vi får vi bruk for dette. Tilfeldige bevegelser og utvalg har generelt blitt oppfattet som for krevende å regne på i andre fagområder på skolenivå. Men kanskje dette kan endre seg når vi får inn mer programmering i fagene. Tenk på diffusjon, radioaktivitet og smittespredning. Programmering med tilfeldige tall og statistisk analyse kan åpne en ny verden av motiverende og virkelighetsnære problemstillinger.
 
 ## Tre kommandoer: randint  uniform  shuffle
 
