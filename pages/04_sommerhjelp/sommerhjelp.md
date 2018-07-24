@@ -33,5 +33,6 @@ Ta gjerne kontakt på [e-post](mailto:anjohan@uio.no) hvis du har problemer med 
     <div class="card-body">
         <a href="./skriv_til_fil" class="btn btn-outline-primary materials-links">Skrive til fil</a>
 		<a href="./tilfeldige_tall" class="btn btn-outline-primary materials-links">Tilfeldige tall</a>
-            </div>
+        <a href="./diverse_tips" class="btn btn-outline-primary materials-links">Diverse tips</a>
+    </div>
 </div> 
