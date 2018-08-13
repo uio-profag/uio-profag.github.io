@@ -23,7 +23,7 @@ Under følger først noen oppgaver fra ProFag, deretter oppgaver fra læreboka i
 
 2. Vi skal nå koke egg. Tiden $t$ i minutter det tar å oppnå en plommetemperatur på $T_{plomme}$ kan modelleres som:
 $$t = A\ln\left[ \frac{2(T_{vann}-T_0)}{T_{vann}-T_{plomme}}\right] $$
-der $A$ er en konstant som kommer an på egget, $T_{vann}$ er vanntemperaturen i kjelen (typisk kokepunktet), $T_0$ er temperaturen i egget før det går i gryta og $T_{plomme}$ er temperaturen vi ønsker i plommen. Lag en funksjon som implementerer denne modellen, og sjekk at den gir rimelige resultater for bløtkokt (65 C) og hardkokt (85 C) egg. 
+der $A$ er en konstant som kommer an på egget, $T_{vann}$ er vanntemperaturen i kjelen (typisk kokepunktet), $T_0$ er temperaturen i egget før det går i gryta og $T_{plomme}$ er temperaturen vi ønsker i plommen. For et vanlig egg er $$A=3,75$$ minutter en fornuftig verdi. Lag en funksjon som implementerer denne modellen, og sjekk at den gir rimelige resultater for bløtkokt (65 C) og hardkokt (85 C) egg. 
 
 3. Endre funksjonen fra 2) slik at den tar inn høyde over havet og bruker funksjonen fra 1) til å regne ut temperaturen i vannet. Hva skjer om man ber om et hardkokt egg på Mount Everest? Kan du endre programmet slik at det oppfører seg penere?
 
