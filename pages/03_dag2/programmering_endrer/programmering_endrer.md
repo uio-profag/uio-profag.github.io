@@ -28,7 +28,7 @@ Vi prøver oss på selve programmeringen!
 
 
 ```python
-#Fallende muffinsformer
+#Fall med luftmotstand
 
 
 from pylab import *
@@ -36,7 +36,7 @@ from pylab import *
 #Fysiske størrelser
 g=9.81  #tyngdeakselerasjon i m/s/s
 m=0.5   #masse til gjenstand som faller i kg
-k=0.2   #luftmotstandskoeffisient i Nsmm
+k=0.2   #luftmotstandskoeffisient i Nss/m/m
 
 #Tidsintervaller
 N=100000    #antall intervaller
