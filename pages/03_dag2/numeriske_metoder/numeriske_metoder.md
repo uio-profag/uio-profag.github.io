@@ -113,7 +113,7 @@ Skjæringssetningen sier at dersom funksjonen $f$ er kontinuerlig og $f(a)$ og $
 
 Halveringsmetoden er en svært enkel metode som består av følgende steg:
 - Gjett på $m = \tfrac{1}{2}(a+b)$.
-- Dersom $f(m)=0$ eller $\mid b-a\mid < \varepsilon$: Suksess!
+- Dersom $f(m)=0$ eller $\mid b-a\!\mid\, < \varepsilon$: Suksess!
 - Dersom $f(a)$ og $f(m)$ har forskjellig fortegn: Gjenta med $b=m$.
 - Dersom $f(m)$ og $f(b)$ har forskjellig fortegn: Gjenta med $a=m$.
 
