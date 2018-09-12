@@ -34,7 +34,7 @@ forelesningsnotat="./numeriske_metoder/numeriske_metoder"
 slides="./numeriske_metoder/numeriske_metoder.pdf" 
 oppgaver=""
 losningsforslag = ""
-published=false
+published=true
 %}
 
 
