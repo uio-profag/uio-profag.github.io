@@ -24,7 +24,7 @@ forelesningsnotat="./programmering_endrer/programmering_endrer"
 slides="./programmering_endrer/programmering_endrer.pdf" 
 oppgaver=""
 losningsforslag = ""
-published=false
+published=true
 %}
 
 
