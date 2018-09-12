@@ -96,7 +96,7 @@ $$
 Når startposisjonen $x(0)$ og starthastigheten $v(0)$ er gitt, kan $x(i\cdot\Delta t)$ og $v(i\cdot\Delta t)$ tilnærmes med gjentatt bruk av disse formlene.
 
 Hoveddelen av koden kan se slik ut:
-``` Python
+```python
 for i in range(N):
     a[i]   = F(t[i],s[i],v[i])/m
     v[i+1] = v[i] + a[i]*dt
@@ -113,14 +113,14 @@ Skjæringssetningen sier at dersom funksjonen $f$ er kontinuerlig og $f(a)$ og $
 
 Halveringsmetoden er en svært enkel metode som består av følgende steg:
 - Gjett på $m = \tfrac{1}{2}(a+b)$.
-- Dersom $f(m)=0$ eller $|b-a| < \varepsilon$: Suksess!
+- Dersom $f(m)=0$ eller $\mid b-a\mid < \varepsilon$: Suksess!
 - Dersom $f(a)$ og $f(m)$ har forskjellig fortegn: Gjenta med $b=m$.
 - Dersom $f(m)$ og $f(b)$ har forskjellig fortegn: Gjenta med $a=m$.
 
 Se [folk.uio.no/anjohan/Halveringsmetoden.html](https://folk.uio.no/anjohan/Halveringsmetoden.html) for en animasjon.
 
 Kodeeksempel:
-``` Python
+```python
 while abs(b-a) > toleranse:
     m = (a+b)/2
     if f(a)*f(m) < 0:
