@@ -14,7 +14,7 @@ forelesningsnotat="./programmering_styrker/programmering_styrker"
 slides="./programmering_styrker/programmering_styrker.pdf" 
 oppgaver=""
 losningsforslag = ""
-published=false
+published=true
 %}
 
 
