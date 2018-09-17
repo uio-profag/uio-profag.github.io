@@ -44,5 +44,5 @@ forelesningsnotat="./modellering/modellering"
 slides="./modellering/modellering.pdf" 
 oppgaver=""
 losningsforslag = ""
-published=false
+published=true
 %}
