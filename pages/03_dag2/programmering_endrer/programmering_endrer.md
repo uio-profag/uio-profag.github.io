@@ -2,7 +2,7 @@
 layout: page
 title: Programmering endrer fagene
 ---
-# Programmering endrer fagene
+
 Denne økta handler om hvordan programmering kan endre fagene når vi ikke lenger er begrenset av hva som er analytisk løsbart eller elevenes matematiske kompetanse. 
 
 Vi starter med å se på mekanikken, men vi kunne like gjerne hentet eksempler fra andre fagområder. I ungdomsskolen lærer elevene om sammenhengen mellom posisjon, fart og akselerasjon. Der lærer de også om krefter og energi. Men det er svært begrenset hva de kan se på av virkelighetsnære problemstillinger. 
