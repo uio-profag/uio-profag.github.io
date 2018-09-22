@@ -6,8 +6,6 @@ sidebar_link: true
 **Tid:** 12. september 2018  
 **Sted:** Universitetet i Oslo
 
-På denne siden vil det komme materiale fra kursdag 2. 
-
 {% include module_links.html 
 title="Del 1: Programmering styrker fagopplæringen" 
 forelesningsnotat="./programmering_styrker/programmering_styrker" 
