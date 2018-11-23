@@ -4,9 +4,6 @@ title: Kursdag 1
 sidebar_link: True
 ---
 
-**Tid:** 12. juni 2018 kl 8:45-15:30  
-**Sted:** Universitetet i Oslo, rom 3127 i Kristine Bonnevies hus på Blindern
-
 På denne siden legger vi ut oppgaver, foiler og undervisningsnotater fra første kursdag. 
 
 {% include module_links.html 
