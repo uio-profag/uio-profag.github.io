@@ -3,8 +3,6 @@ layout: page
 title: Kursdag 2
 sidebar_link: true
 ---
-**Tid:** 12. september 2018  
-**Sted:** Universitetet i Oslo
 
 {% include module_links.html 
 title="Del 1: Programmering styrker fagopplæringen" 
