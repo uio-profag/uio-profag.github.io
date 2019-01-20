@@ -48,7 +48,7 @@ dx = 1e-4
 Som vi ser, gir dette en god tilnærming. Ved å eksperimentere med forskjellige verdier av `dx` vil du se at feilen er proporsjonal med $\Delta x$. En bedre metode er den symmetriske Newton-kvotienten,
 
 $$
-    f'(a) \approx \frac{f(a + \Delta x) - f(a - \Delta x)}{\Delta x}.
+    f'(a) \approx \frac{f(a + \Delta x) - f(a - \Delta x)}{2\Delta x}.
 $$
 
 Med denne metoden er feilen proporsjonal med *kvadratet* av $\Delta x$.
